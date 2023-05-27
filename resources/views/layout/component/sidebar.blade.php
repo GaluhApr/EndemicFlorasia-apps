@@ -4,10 +4,10 @@
     -->
      <div class="logo">
          <a href="http://www.creative-tim.com" class="simple-text logo-mini">
-             CT
+             EF
          </a>
          <a href="http://www.creative-tim.com" class="simple-text logo-normal">
-             Creative Tim
+             Endemic Florasia
          </a>
      </div>
      <div class="sidebar-wrapper" id="sidebar-wrapper">

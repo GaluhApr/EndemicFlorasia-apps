@@ -17,16 +17,19 @@
                             <table class="table">
                                 <thead class=" text-primary">
                                     <th>
-                                        Name
+                                        Nama
                                     </th>
                                     <th>
-                                        Country
+                                        Famili
                                     </th>
                                     <th>
-                                        City
+                                        Jenis
+                                    </th>
+                                    <th>
+                                        Habitat
                                     </th>
                                     <th class="text-right">
-                                        Salary
+                                        Deskripsi
                                     </th>
                                 </thead>
                                 <tbody>
@@ -39,6 +42,9 @@
                                         </td>
                                         <td>
                                             Oud-Turnhout
+                                        </td>
+                                        <td>
+                                            -
                                         </td>
                                         <td class="text-right">
                                             $36,738
@@ -54,6 +60,9 @@
                                         <td>
                                             Sinaai-Waas
                                         </td>
+                                        <td>
+                                            -
+                                        </td>
                                         <td class="text-right">
                                             $23,789
                                         </td>
@@ -67,6 +76,9 @@
                                         </td>
                                         <td>
                                             Baileux
+                                        </td>
+                                        <td>
+                                            -
                                         </td>
                                         <td class="text-right">
                                             $56,142
@@ -82,6 +94,9 @@
                                         <td>
                                             Overland Park
                                         </td>
+                                        <td>
+                                            -
+                                        </td>
                                         <td class="text-right">
                                             $38,735
                                         </td>
@@ -95,6 +110,9 @@
                                         </td>
                                         <td>
                                             Feldkirchen in Kärnten
+                                        </td>
+                                        <td>
+                                            -
                                         </td>
                                         <td class="text-right">
                                             $63,542
@@ -110,6 +128,9 @@
                                         <td>
                                             Gloucester
                                         </td>
+                                        <td>
+                                            -
+                                        </td>
                                         <td class="text-right">
                                             $78,615
                                         </td>
@@ -123,6 +144,9 @@
                                         </td>
                                         <td>
                                             Gloucester
+                                        </td>
+                                        <td>
+                                            -
                                         </td>
                                         <td class="text-right">
                                             $98,615
