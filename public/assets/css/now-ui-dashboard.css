@@ -1,4 +1,6 @@
-
+*{
+     overflow: hidden;
+}
 .animated {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
@@ -1933,7 +1935,7 @@ p.description {
 .text-primary,
 a.text-primary:focus,
 a.text-primary:hover {
-  color: #f96332 !important;
+  color: #080808 !important;
 }
 
 .text-info,
@@ -3072,7 +3074,6 @@ Created using IcoMoon - icomoon.io
   display: inline-block;
   font: normal normal normal 14px/1 'Nucleo Outline';
   font-size: inherit;
-  speak: none;
   text-transform: none;
   /* Better Font Rendering */
   -webkit-font-smoothing: antialiased;
@@ -4047,20 +4048,6 @@ Created using IcoMoon - icomoon.io
   z-index: 3;
 }
 
-.sidebar[data-color="blue"]:after,
-.off-canvas-sidebar[data-color="blue"]:after {
-  background: #2CA8FF;
-}
-
-.sidebar[data-color="blue"] .nav li.active>a:not([data-toggle="collapse"]),
-.off-canvas-sidebar[data-color="blue"] .nav li.active>a:not([data-toggle="collapse"]) {
-  color: #2CA8FF;
-}
-
-.sidebar[data-color="blue"] .nav li.active>a:not([data-toggle="collapse"]) i,
-.off-canvas-sidebar[data-color="blue"] .nav li.active>a:not([data-toggle="collapse"]) i {
-  color: #2CA8FF;
-}
 
 .sidebar[data-color="green"]:after,
 .off-canvas-sidebar[data-color="green"]:after {
@@ -4077,50 +4064,6 @@ Created using IcoMoon - icomoon.io
   color: #357960;
 }
 
-.sidebar[data-color="orange"]:after,
-.off-canvas-sidebar[data-color="orange"]:after {
-  background: #f96332;
-}
-
-.sidebar[data-color="orange"] .nav li.active>a:not([data-toggle="collapse"]),
-.off-canvas-sidebar[data-color="orange"] .nav li.active>a:not([data-toggle="collapse"]) {
-  color: #f96332;
-}
-
-.sidebar[data-color="orange"] .nav li.active>a:not([data-toggle="collapse"]) i,
-.off-canvas-sidebar[data-color="orange"] .nav li.active>a:not([data-toggle="collapse"]) i {
-  color: #f96332;
-}
-
-.sidebar[data-color="red"]:after,
-.off-canvas-sidebar[data-color="red"]:after {
-  background: #FF3636;
-}
-
-.sidebar[data-color="red"] .nav li.active>a:not([data-toggle="collapse"]),
-.off-canvas-sidebar[data-color="red"] .nav li.active>a:not([data-toggle="collapse"]) {
-  color: #FF3636;
-}
-
-.sidebar[data-color="red"] .nav li.active>a:not([data-toggle="collapse"]) i,
-.off-canvas-sidebar[data-color="red"] .nav li.active>a:not([data-toggle="collapse"]) i {
-  color: #FF3636;
-}
-
-.sidebar[data-color="yellow"]:after,
-.off-canvas-sidebar[data-color="yellow"]:after {
-  background: #FFB236;
-}
-
-.sidebar[data-color="yellow"] .nav li.active>a:not([data-toggle="collapse"]),
-.off-canvas-sidebar[data-color="yellow"] .nav li.active>a:not([data-toggle="collapse"]) {
-  color: #FFB236;
-}
-
-.sidebar[data-color="yellow"] .nav li.active>a:not([data-toggle="collapse"]) i,
-.off-canvas-sidebar[data-color="yellow"] .nav li.active>a:not([data-toggle="collapse"]) i {
-  color: #FFB236;
-}
 
 .visible-on-sidebar-regular {
   display: inline-block !important;
@@ -4224,7 +4167,7 @@ Created using IcoMoon - icomoon.io
 
 .footer nav {
   display: inline-block;
-  float: left;
+
   padding-left: 7px;
 }
 
@@ -4418,7 +4361,7 @@ Created using IcoMoon - icomoon.io
 }
 
 .fixed-plugin .adjustments-line p {
-  float: left;
+
   display: inline-block;
   margin-bottom: 0;
   font-size: 1em;
