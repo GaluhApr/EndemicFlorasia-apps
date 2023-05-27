@@ -14,5 +14,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('admin.dashboard.index');
+});
+
+
+Route::get('/list-tanaman', function () {
+    return view('admin.tanaman.index');
 });
