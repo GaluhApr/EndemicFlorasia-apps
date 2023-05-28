@@ -21,3 +21,7 @@ Route::get('/', function () {
 Route::get('/list-tanaman', function () {
     return view('admin.tanaman.index');
 });
+
+Route::get('/tambah-tanaman', function () {
+    return view('admin.tanaman.create');
+});

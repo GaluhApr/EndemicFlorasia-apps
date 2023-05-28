@@ -10,14 +10,14 @@
             </div>
             <a class="navbar-brand" href="#pablo">Dashboard</a>
         </div>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
+        {{-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
             aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-bar navbar-kebab"></span>
             <span class="navbar-toggler-bar navbar-kebab"></span>
             <span class="navbar-toggler-bar navbar-kebab"></span>
-        </button>
+        </button> --}}
         <div class="collapse navbar-collapse justify-content-end" id="navigation">
-            <form>
+            {{-- <form>
                 <div class="input-group no-border">
                     <input type="text" value="" class="form-control" placeholder="Search...">
                     <div class="input-group-append">
@@ -26,8 +26,8 @@
                         </div>
                     </div>
                 </div>
-            </form>
-            <ul class="navbar-nav">
+            </form> --}}
+            {{-- <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link" href="#pablo">
                         <i class="now-ui-icons media-2_sound-wave"></i>
@@ -36,7 +36,7 @@
                         </p>
                     </a>
                 </li>
-                {{-- <li class="nav-item dropdown">
+                <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false">
                         <i class="now-ui-icons location_world"></i>
@@ -49,7 +49,7 @@
                         <a class="dropdown-item" href="#">Another action</a>
                         <a class="dropdown-item" href="#">Something else here</a>
                     </div>
-                </li> --}}
+                </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#pablo">
                         <i class="now-ui-icons users_single-02"></i>
@@ -58,7 +58,7 @@
                         </p>
                     </a>
                 </li>
-            </ul>
+            </ul> --}}
         </div>
     </div>
 </nav>

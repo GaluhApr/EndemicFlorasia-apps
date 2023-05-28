@@ -11,6 +11,9 @@
                 <div class="card">
                     <div class="card-header">
                         <h4 class="card-title"> List Tanaman</h4>
+                        <a href="{{ url('/tambah-tanaman') }}"><button class="btn btn-primary border-0 p-2"> <i
+                                    class="now-ui-icons ui-1_simple-add"></i> Tambah
+                                Tanaman</button></a>
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
