@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('habitats', function (Blueprint $table) {
             $table->id();
-            $table->string('nama', 50);
-            $table->string('deskripsi');
+            $table->string('nama_habitat', 50);
+            $table->string('deskripsi_habitat');
         });
     }
 

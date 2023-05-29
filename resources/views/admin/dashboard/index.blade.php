@@ -11,8 +11,8 @@
             <div class="col-lg-4 col-md-6">
                 <div class="card card-chart">
                     <div class="card-header">
-                        <h5 class="card-category">Jumlah Tanaman</h5>
-                        <h4 class="card-title">1 tanaman</h4>
+                        <h5 class="card-category">Jumlah Tanaman Terdaftar</h5>
+                        <h4 class="card-title">{{ $jumlah_tanaman }}</h4>
                     </div>
                     <div class="card-body">
                         <div class="chart-area">
@@ -24,8 +24,8 @@
             <div class="col-lg-4 col-md-6">
                 <div class="card card-chart">
                     <div class="card-header">
-                        <h5 class="card-category">Jenis Tanaman</h5>
-                        <h4 class="card-title">10 Jenis</h4>
+                        <h5 class="card-category">Jumlah Habitat Terdaftar</h5>
+                        <h4 class="card-title">{{ $jumlah_habitat }}</h4>
                     </div>
                     <div class="card-body">
                         <div class="chart-area">

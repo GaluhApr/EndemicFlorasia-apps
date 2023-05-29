@@ -19,7 +19,7 @@
                  </a>
              </li>
              <li class="">
-                 <a href="/list-tanaman">
+                 <a href="{{ url('tanaman') }}">
                      <i class="now-ui-icons design_bullet-list-67"></i>
                      <p>List Tanaman</p>
                  </a>

@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TanamanController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,14 +15,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('admin.dashboard.index');
-});
+Route::get('/', [DashboardController::class, 'index']);
+Route::resource('/tanaman', TanamanController::class);
 
-
-Route::get('/list-tanaman', function () {
-    return view('admin.tanaman.index');
-});
 
 Route::get('/tambah-tanaman', function () {
     return view('admin.tanaman.create');

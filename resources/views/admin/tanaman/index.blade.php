@@ -11,7 +11,7 @@
                 <div class="card">
                     <div class="card-header">
                         <h4 class="card-title"> List Tanaman</h4>
-                        <a href="{{ url('/tambah-tanaman') }}"><button class="btn btn-primary border-0 p-2"> <i
+                        <a href="{{ url('tanaman/create') }}"><button class="btn btn-primary border-0 p-2"> <i
                                     class="now-ui-icons ui-1_simple-add"></i> Tambah
                                 Tanaman</button></a>
                     </div>
@@ -19,6 +19,9 @@
                         <div class="table-responsive">
                             <table class="table">
                                 <thead class=" text-primary">
+                                    <th>
+                                        No
+                                    </th>
                                     <th>
                                         Nama
                                     </th>
@@ -39,26 +42,24 @@
                                     </th>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>
-                                            Dakota Rice
-                                        </td>
-                                        <td>
-                                            Niger
-                                        </td>
-                                        <td>
-                                            Oud-Turnhout
-                                        </td>
-                                        <td>
-                                            -
-                                        </td>
-                                        <td>
-                                            -
-                                        </td>
-                                        <td class="text-right">
-                                            -
-                                        </td>
-                                    </tr>
+                                    @foreach ($tanaman as $tnm)
+                                        <tr>
+                                            <th scope="row">{{ $loop->iteration }}</th>
+                                            <td>{{ $tnm->nama_tanaman }}</td>
+                                            <td>{{ $tnm->famili }}</td>
+                                            <td>{{ $tnm->jenis }}</td>
+                                            <td>{{ $tnm->habitat->nama_habitat }}</td>
+                                            <td>{{ $tnm->gambar }}</td>
+                                            <td class="text-right">
+                                                <a href="#"><button
+                                                        class="now-ui-icons shopping_tag-content btn btn-success border-0 p-2"></button></a>
+                                                <a href="#"><button
+                                                        class="btn btn-danger border-0 p-2 now-ui-icons ui-1_simple-remove"
+                                                        id="btn-hapus-wisata" data-id-wisata={{ $tnm->id }}>
+                                                        <span data-feather="x-circle"></span></button>
+                                            </td>
+                                        </tr>
+                                    @endforeach
                                 </tbody>
                             </table>
                         </div>

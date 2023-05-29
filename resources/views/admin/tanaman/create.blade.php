@@ -14,32 +14,57 @@
                          <h5 class="title">Tambah Tanaman</h5>
                      </div>
                      <div class="card-body">
-                         <form>
+                         <form action="{{ '/tanaman' }}" method="POST" enctype="multipart/form-data">
+                             @csrf
                              <div class="row">
                                  <div class="col-md-7 pr-1">
                                      <div class="form-group">
                                          <label>Nama Tanaman</label>
-                                         <input type="text" class="form-control" placeholder="Nama Tanaman">
+                                         <input type="text" name="nama_tanaman" class="form-control"
+                                             @error('nama_tanaman') is-invalid @enderror" placeholder="Nama Tanaman"
+                                             required>
+                                         @error('nama_tanaman')
+                                             <div class="invalid-feedback">
+                                                 {{ $message }}
+                                             </div>
+                                         @enderror
                                      </div>
                                  </div>
                                  <div class="col-md-5  pl-3">
                                      <div class="form-group">
                                          <label>Famili</label>
-                                         <input type="text" class="form-control" placeholder="Famili">
+                                         <input type="text" name="famili" class="form-control"
+                                             @error('famili') is-invalid @enderror" placeholder="Famili" required>
+                                         @error('famili')
+                                             <div class="invalid-feedback">
+                                                 {{ $message }}
+                                             </div>
+                                         @enderror
                                      </div>
                                  </div>
                              </div>
                              <div class="row pt-3">
                                  <div class="col-md-5 pr-1">
                                      <div class="form-group">
-                                         <label>Habitat</label>
-                                         <input type="text" class="form-control" placeholder="Habitat">
+                                         <label>Famili</label>
+                                         <select name="habitat_id" class="form-control">
+                                             <option value="">Pilih Habitat</option>
+                                             @foreach ($habitat as $hbt)
+                                                 <option value="{{ $hbt->id }}">{{ $hbt->nama_habitat }}</option>
+                                             @endforeach
+                                         </select>
                                      </div>
                                  </div>
                                  <div class="col-md-6 pl-3">
                                      <div class="form-group">
                                          <label>Jenis Tanaman</label>
-                                         <input type="text" class="form-control" placeholder="Jenis Tanaman">
+                                         <input type="text" name="jenis" class="form-control"
+                                             @error('jenis') is-invalid @enderror" placeholder="Jenis" required>
+                                         @error('jenis')
+                                             <div class="invalid-feedback">
+                                                 {{ $message }}
+                                             </div>
+                                         @enderror
                                      </div>
                                  </div>
                              </div>
@@ -47,7 +72,13 @@
                                  <div class="col-md-12">
                                      <div class="form-group">
                                          <label>Deskripsi</label>
-                                         <textarea type="text" class="form-control" placeholder="Deskripsi" rows="6"></textarea>
+                                         <input type="text" name="deskripsi" class="form-control"
+                                             @error('deskripsi') is-invalid @enderror" placeholder="Deskripsi" required>
+                                         @error('deskripsi')
+                                             <div class="invalid-feedback">
+                                                 {{ $message }}
+                                             </div>
+                                         @enderror
                                      </div>
                                  </div>
                              </div>
