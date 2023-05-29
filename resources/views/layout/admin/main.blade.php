@@ -26,18 +26,18 @@
     <div class="wrapper ">
 
         <!-- Sidebar -->
-        @include('layout.component.sidebar')
+        @include('layout.admin.component.sidebar')
         <!-- End Sidebar -->
 
         <div class="main-panel" id="main-panel">
             <!-- Navbar -->
-            @include('layout.component.navbar')
+            @include('layout.admin.component.navbar')
             <!-- End Navbar -->
 
             @yield('content')
 
             <!-- Footer -->
-            @include('layout.component.footer')
+            @include('layout.admin.component.footer')
             <!-- End Footer -->
         </div>
     </div>

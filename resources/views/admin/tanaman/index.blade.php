@@ -1,5 +1,5 @@
-@extends('layout.main', [
-    'namePage' => 'List-tanaman',
+@extends('layout.admin.main', [
+    'namePage' => 'List  Tanaman',
 ])
 @section('title', 'List-tanaman')
 @section('content')
