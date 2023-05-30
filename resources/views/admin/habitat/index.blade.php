@@ -26,33 +26,27 @@
                                         Nama
                                     </th>
                                     <th>
-                                        Famili
-                                    </th>
-                                    <th>
-                                        Jenis
-                                    </th>
-                                    <th>
-                                        Habitat
+                                        Deskripsi
                                     </th>
                                     <th class="text-right">
-                                        Aksi
+                                        aksi
                                     </th>
                                 </thead>
                                 <tbody>
-                                    @foreach ($habitat as $tnm)
+                                    @foreach ($habitat as $hbt)
                                         <tr>
                                             <th scope="row">{{ $loop->iteration }}</th>
-                                            <td>{{ $tnm->nama_habitat }}</td>
-                                            <!-- <td>{{ $tnm->famili }}</td> -->
-                                            <!-- <td>{{ $tnm->jenis }}</td> -->
-                                            <td>{{ $tnm->habitat->nama_habitat }}</td>
+                                            <td>{{ $hbt->nama_habitat }}</td>
+                                            <td>{{ $hbt->deskripsi_habitat }}</td>
                                             <td class="text-right">
-                                                <a href="{{ url('habitat/' . $tnm->id . '/edit') }}"><button
-                                                        class="now-ui-icons shopping_tag-content btn btn-success border-0 p-2"></button></a>
-                                                <a href="habitat/delete/{{ $tnm->id }}"><button
-                                                        class="btn btn-danger border-0 p-2 now-ui-icons ui-1_simple-remove"
-                                                        id="btn-hapus-habitat" data-id-habitat={{ $tnm->id }}>
-                                                        <span data-feather="x-circle"></span></button>
+                                                <div class="aksi">
+                                                    <a href="{{ url('habitat/' . $hbt->id . '/edit') }}"><button
+                                                            class="now-ui-icons shopping_tag-content btn btn-success border-0 p-2"></button></a>
+                                                    <a href="habitat/delete/{{ $hbt->id }}"><button
+                                                            class="btn btn-danger border-0 p-2 now-ui-icons ui-1_simple-remove"
+                                                            id="btn-hapus-habitat" data-id-habitat={{ $hbt->id }}>
+                                                            <span data-feather="x-circle"></span></button>
+                                                </div>
                                             </td>
                                         </tr>
                                     @endforeach

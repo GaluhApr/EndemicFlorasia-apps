@@ -49,8 +49,6 @@ class TanamanController extends Controller
             'habitat_id' => 'required',
             'deskripsi' => 'required',
             'gambar' => 'required|image|file|max:5120',
-
-
         ]);
 
         $validate['gambar'] = $request->file('gambar')->store('tanaman-image');
@@ -93,6 +91,14 @@ class TanamanController extends Controller
      */
     public function update(Request $request, $id)
     {
+
+        $validate = $request->validate([
+            'nama_tanaman' => 'required|max:255',
+            'famili' => 'required',
+            'jenis' => 'required',
+            'habitat_id' => 'required',
+            'deskripsi' => 'required',
+        ]);
 
 
         if (empty($request->file('gambar'))) {

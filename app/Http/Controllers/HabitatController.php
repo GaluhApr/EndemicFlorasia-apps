@@ -23,10 +23,9 @@ class HabitatController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create(Request $request)
+    public function create()
     {
-        $habitat = Habitat::all();
-        return view('admin.habitat.create', compact('habitat', 'request'));
+        return view('admin.habitat.create');
     }
 
     /**
@@ -37,7 +36,15 @@ class HabitatController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validate = $request->validate([
+            'nama_habitat' => 'required|max:255|unique:habitats',
+            'deskripsi_habitat' => 'required',
+
+        ]);
+
+        Habitat::create($validate);
+
+        return redirect('/habitat');
     }
 
     /**
@@ -59,7 +66,8 @@ class HabitatController extends Controller
      */
     public function edit($id)
     {
-        //
+        $hbt = Habitat::find($id);
+        return view('admin.habitat.edit', compact('hbt'));
     }
 
     /**
@@ -71,7 +79,15 @@ class HabitatController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $validate = $request->validate([
+            'nama_habitat' => 'required|max:255',
+            'deskripsi_habitat' => 'required',
+
+        ]);
+        $habitat = Habitat::FindOrFail($id);
+        $habitat->update($validate);
+
+        return redirect('/habitat');
     }
 
     /**
@@ -80,8 +96,10 @@ class HabitatController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function delete($id)
     {
-        //
+        $habitat = Habitat::find($id);
+        $habitat->delete();
+        return redirect('/habitat');
     }
 }

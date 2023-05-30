@@ -12,23 +12,23 @@
      </div>
      <div class="sidebar-wrapper" id="sidebar-wrapper">
          <ul class="nav">
-             <li class="">
+             <li class="{{ Request::is('/') ? 'active' : '' }}">
                  <a href="/">
                      <i class="now-ui-icons design_app"></i>
                      <p>Dashboard</p>
                  </a>
              </li>
-             <li class="">
+             <li class="{{ Request::is('tanaman*') ? 'active' : '' }}">
                  <a href="{{ url('tanaman') }}">
                      <i class="now-ui-icons design_bullet-list-67"></i>
                      <p>List Tanaman</p>
                  </a>
              </li>
-             <li class="">
+             <li class="{{ Request::is('habitat*') ? 'active' : '' }}">
                  <a href="{{ url('habitat') }}">
                      <i class="now-ui-icons design_bullet-list-67"></i>
                      <p>List Habitat</p>
-             {{-- <li>
+                     {{-- <li>
                  <a href="./icons.html">
                      <i class="now-ui-icons education_atom"></i>
                      <p>Icons</p>

@@ -14,7 +14,7 @@
                          <h5 class="title">Tambah Tanaman</h5>
                      </div>
                      <div class="card-body">
-                         <form action="{{ '/habitat' }}" method="POST" enctype="multipart/form-data">
+                         <form action="{{ '/tanaman' }}" method="POST" enctype="multipart/form-data">
                              @csrf
                              <div class="row">
                                  <div class="col-md-7 pr-1">

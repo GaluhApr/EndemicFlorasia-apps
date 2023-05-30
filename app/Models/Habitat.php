@@ -11,6 +11,6 @@ class Habitat extends Model
 {
     use HasApiTokens, HasFactory, Notifiable;
     protected $table = 'habitats';
-    protected $fillable = ['nama', 'deskripsi'];
+    protected $fillable = ['nama_habitat', 'deskripsi_habitat'];
     public $timestamps = false;
 }

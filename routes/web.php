@@ -22,3 +22,4 @@ Route::resource('/habitat', HabitatController::class);
 
 //delete
 Route::get('/tanaman/delete/{id}', [TanamanController::class, 'delete'])->name('delete');
+Route::get('/habitat/delete/{id}', [HabitatController::class, 'delete'])->name('delete');
