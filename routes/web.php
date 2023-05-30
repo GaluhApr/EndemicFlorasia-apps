@@ -18,7 +18,5 @@ use App\Http\Controllers\TanamanController;
 Route::get('/', [DashboardController::class, 'index']);
 Route::resource('/tanaman', TanamanController::class);
 
-
-Route::get('/tambah-tanaman', function () {
-    return view('admin.tanaman.create');
-});
+//delete
+Route::get('/tanaman/delete/{id}', [TanamanController::class, 'delete'])->name('delete');

@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('famili', 50);
             $table->string('jenis', 50);
             $table->string('deskripsi');
+            $table->string('gambar');
             $table->foreignId('habitat_id');
         });
     }

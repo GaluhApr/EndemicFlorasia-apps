@@ -538,6 +538,52 @@ fieldset[disabled] .navbar .navbar-nav>a.btn.active {
   top: 1px;
 }
 
+
+.btn-success {
+  background-color: #18ce0f;
+  color: #FFFFFF;
+}
+
+.btn-success:hover,
+.btn-success:focus,
+.btn-success:not(:disabled):not(.disabled):active,
+.btn-success:not(:disabled):not(.disabled).active,
+.btn-success:not(:disabled):not(.disabled):active:focus,
+.btn-success:not(:disabled):not(.disabled).active:focus,
+.btn-success:active:hover,
+.btn-success.active:hover,
+.show>.btn-success.dropdown-toggle,
+.show>.btn-success.dropdown-toggle:focus,
+.show>.btn-success.dropdown-toggle:hover {
+  background-color: #1beb11;
+  color: #FFFFFF;
+  box-shadow: none;
+  border-color: #1beb11;
+}
+
+
+.btn-danger {
+  background-color: #FF3636;
+  color: #FFFFFF;
+}
+
+.btn-danger:hover,
+.btn-danger:focus,
+.btn-danger:not(:disabled):not(.disabled):active,
+.btn-danger:not(:disabled):not(.disabled).active,
+.btn-danger:not(:disabled):not(.disabled):active:focus,
+.btn-danger:not(:disabled):not(.disabled).active:focus,
+.btn-danger:active:hover,
+.btn-danger.active:hover,
+.show>.btn-danger.dropdown-toggle,
+.show>.btn-danger.dropdown-toggle:focus,
+.show>.btn-danger.dropdown-toggle:hover {
+  background-color: #ff5555;
+  color: #FFFFFF;
+  box-shadow: none;
+  border-color: #ff5555;
+}
+
 .btn-primary {
   background-color: #357960;
   color: #FFFFFF;
@@ -713,7 +759,7 @@ fieldset[disabled] .btn-primary.active {
 
 .form-control {
   background-color: transparent;
-  border: 1px solid #E3E3E3;
+  border: 1px solid #acabab;
   border-radius: 30px;
   color: #2c2c2c;
   line-height: normal;

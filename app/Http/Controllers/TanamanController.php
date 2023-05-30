@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Tanaman;
 use Illuminate\Http\Request;
 use App\Models\Habitat;
+use Illuminate\Support\Facades\Storage;
+use RealRashid\SweetAlert\Facades\Alert;
 
 
 class TanamanController extends Controller
@@ -39,17 +41,19 @@ class TanamanController extends Controller
      */
     public function store(Request $request)
     {
+
         $validate = $request->validate([
             'nama_tanaman' => 'required|max:255|unique:tanamans',
             'famili' => 'required',
             'jenis' => 'required',
             'habitat_id' => 'required',
             'deskripsi' => 'required',
+            'gambar' => 'required|image|file|max:5120',
+
 
         ]);
 
-
-
+        $validate['gambar'] = $request->file('gambar')->store('tanaman-image');
         Tanaman::create($validate);
 
         return redirect('/tanaman');
@@ -74,7 +78,9 @@ class TanamanController extends Controller
      */
     public function edit($id)
     {
-        //
+        $habitat = Habitat::all();
+        $tnm = Tanaman::find($id);
+        return view('admin.tanaman.edit', compact('tnm', 'habitat'));
     }
 
     /**
@@ -83,10 +89,38 @@ class TanamanController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
      * @return \Illuminate\Http\Response
+     * @param App\Models\Tanaman;
      */
     public function update(Request $request, $id)
     {
-        //
+
+
+        if (empty($request->file('gambar'))) {
+            $tanaman = Tanaman::FindOrFail($id);
+            $tanaman->update([
+                'nama_tanaman' => $request->nama_tanaman,
+                'famili' => $request->famili,
+                'jenis' => $request->jenis,
+                'deskripsi' => $request->deskripsi,
+                'habitat_id' => $request->habitat_id,
+
+
+            ]);
+        } else {
+            $tanaman = Tanaman::FindOrFail($id);
+            Storage::delete($tanaman->gambar);
+            $tanaman->update([
+
+                'nama_tanaman' => $request->nama_tanaman,
+                'famili' => $request->famili,
+                'jenis' => $request->jenis,
+                'deskripsi' => $request->deskripsi,
+                'habitat_id' => $request->habitat_id,
+                'gambar' => $request->file('gambar')->store('tanaman-image')
+            ]);
+        }
+
+        return redirect('/tanaman');
     }
 
     /**
@@ -95,8 +129,15 @@ class TanamanController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function delete($id)
     {
-        //
+        $tanaman = Tanaman::find($id);
+        Storage::delete([
+            $tanaman->gambar
+
+        ]);
+
+        $tanaman->delete();
+        return redirect('/tanaman');
     }
 }

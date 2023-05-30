@@ -34,9 +34,6 @@
                                     <th>
                                         Habitat
                                     </th>
-                                    <th>
-                                        Gambar
-                                    </th>
                                     <th class="text-right">
                                         Aksi
                                     </th>
@@ -49,13 +46,12 @@
                                             <td>{{ $tnm->famili }}</td>
                                             <td>{{ $tnm->jenis }}</td>
                                             <td>{{ $tnm->habitat->nama_habitat }}</td>
-                                            <td>{{ $tnm->gambar }}</td>
                                             <td class="text-right">
-                                                <a href="#"><button
+                                                <a href="{{ url('tanaman/' . $tnm->id . '/edit') }}"><button
                                                         class="now-ui-icons shopping_tag-content btn btn-success border-0 p-2"></button></a>
-                                                <a href="#"><button
+                                                <a href="tanaman/delete/{{ $tnm->id }}"><button
                                                         class="btn btn-danger border-0 p-2 now-ui-icons ui-1_simple-remove"
-                                                        id="btn-hapus-wisata" data-id-wisata={{ $tnm->id }}>
+                                                        id="btn-hapus-tanaman" data-id-tanaman={{ $tnm->id }}>
                                                         <span data-feather="x-circle"></span></button>
                                             </td>
                                         </tr>
