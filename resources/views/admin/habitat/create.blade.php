@@ -1,7 +1,7 @@
- @extends('layout.admin.main', [
-     'namePage' => 'List  Tanaman',
+@extends('layout.admin.main', [
+     'namePage' => 'List  Habitat',
  ])
- @section('title', 'Tambah-tanaman')
+ @section('title', 'Tambah-habitat')
  @section('content')
 
      <div class="panel-header panel-header-sm">
@@ -11,7 +11,7 @@
              <div class="col-md-8">
                  <div class="card">
                      <div class="card-header">
-                         <h5 class="title">Tambah Tanaman</h5>
+                         <h5 class="title">Tambah Habitat</h5>
                      </div>
                      <div class="card-body">
                          <form action="{{ '/habitat' }}" method="POST" enctype="multipart/form-data">
@@ -19,11 +19,11 @@
                              <div class="row">
                                  <div class="col-md-7 pr-1">
                                      <div class="form-group">
-                                         <label>Nama Tanaman</label>
-                                         <input type="text" name="nama_tanaman"
-                                             class="form-control  @error('nama_tanaman') is-invalid @enderror"
-                                             placeholder="Nama Tanaman" value="{{ old('nama_tanaman') }}" required>
-                                         @error('nama_tanaman')
+                                         <label>Nama Habitat</label>
+                                         <input type="text" name="nama_habitat"
+                                             class="form-control  @error('nama_habitat') is-invalid @enderror"
+                                             placeholder="Nama Habitat" value="{{ old('nama_habitat') }}" required>
+                                         @error('nama_habitat')
                                              <div class="invalid-feedback">
                                                  {{ $message }}
                                              </div>
@@ -32,11 +32,11 @@
                                  </div>
                                  <div class="col-md-5  pl-3">
                                      <div class="form-group">
-                                         <label>Famili</label>
-                                         <input type="text" name="famili"
-                                             class="form-control @error('famili') is-invalid @enderror "
-                                             placeholder="Famili" value="{{ old('famili') }}" required>
-                                         @error('famili')
+                                         <!-- <labe>Deskripsi</label>
+                                         <input type="text" name="deskripsi"
+                                             class="form-control @error('deskripsi') is-invalid @enderror "
+                                             placeholder="Deskripsi" value="{{ old('deskripsi') }}" required>
+                                         @error('deskripsi') -->
                                              <div class="invalid-feedback">
                                                  {{ $message }}
                                              </div>
@@ -50,7 +50,7 @@
                                          <label>Habitat</label>
                                          <select name="habitat_id"
                                              class="form-control  @error('habitat_id') is-invalid @enderror">
-                                             <option value="">Pilih Habitat</option>
+                                             <!-- <option value="">Pilih Habitat</option> -->
                                              @foreach ($habitat as $hbt)
                                                  <option value="{{ $hbt->id }}">{{ $hbt->nama_habitat }}</option>
                                              @endforeach
@@ -64,10 +64,10 @@
                                  </div>
                                  <div class="col-md-6 pl-3">
                                      <div class="form-group">
-                                         <label>Jenis Tanaman</label>
-                                         <input type="text" name="jenis"
+                                         <!-- <label>Deskripsi</label> -->
+                                         <!-- <input type="text" name="jenis"
                                              class="form-control  @error('jenis') is-invalid @enderror" placeholder="Jenis"
-                                             value="{{ old('jenis') }}" required>
+                                             value="{{ old('jenis') }}" required> -->
                                          @error('jenis')
                                              <div class="invalid-feedback">
                                                  {{ $message }}
@@ -93,9 +93,9 @@
                              <div class="row">
                                  <div class="col-6">
                                      <div class="form-goup">
-                                         <label>gambar</label>
+                                         <!-- <label>gambar</label>
                                          <input type="file" class="form-control @error('gambar') is-invalid @enderror"
-                                             name="gambar">
+                                             name="gambar"> -->
                                          @error('gambar')
                                              <div class="invalid-feedback">
                                                  {{ $message }}
@@ -112,7 +112,7 @@
              {{-- <div class="col-md-4">
                  <div class="card">
                      <div class="card-header">
-                         <h5 class="title">Gambar Tanaman</h5>
+                         <h5 class="title">Gambar Habitat</h5>
                      </div>
                      <div class="card-body">
 

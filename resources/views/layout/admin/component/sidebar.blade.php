@@ -24,6 +24,10 @@
                      <p>List Tanaman</p>
                  </a>
              </li>
+             <li class="">
+                 <a href="{{ url('habitat') }}">
+                     <i class="now-ui-icons design_bullet-list-67"></i>
+                     <p>List Habitat</p>
              {{-- <li>
                  <a href="./icons.html">
                      <i class="now-ui-icons education_atom"></i>
@@ -66,6 +70,8 @@
                      <p>Upgrade to PRO</p>
                  </a>
              </li> --}}
+                 </a>
+             </li>
          </ul>
      </div>
  </div>

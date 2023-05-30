@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Habitat;
 use Illuminate\Http\Request;
 
 class HabitatController extends Controller
@@ -11,9 +12,10 @@ class HabitatController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+        $habitat = Habitat::all();
+        return view('admin.habitat.index', compact('habitat', 'request'));
     }
 
     /**
@@ -21,9 +23,10 @@ class HabitatController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+        $habitat = Habitat::all();
+        return view('admin.habitat.create', compact('habitat', 'request'));
     }
 
     /**

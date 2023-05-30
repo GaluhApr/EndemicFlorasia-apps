@@ -3,6 +3,7 @@
 use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TanamanController;
+use App\Http\Controllers\HabitatController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +18,7 @@ use App\Http\Controllers\TanamanController;
 
 Route::get('/', [DashboardController::class, 'index']);
 Route::resource('/tanaman', TanamanController::class);
+Route::resource('/habitat', HabitatController::class);
 
 //delete
 Route::get('/tanaman/delete/{id}', [TanamanController::class, 'delete'])->name('delete');
