@@ -44,10 +44,20 @@ class TanamanController extends Controller
 
         $validate = $request->validate([
             'nama_tanaman' => 'required|max:255|unique:tanamans',
-            'famili' => 'required',
-            'jenis' => 'required',
-            'habitat_id' => 'required',
-            'deskripsi' => 'required',
+            'kingdom' => 'required|max:50',
+            'subkingdom' => 'required|max:50',
+            'divisi' => 'required|max:50',
+            'subdivisi' => 'required|max:50',
+            'kelas' => 'required|max:50',
+            'subkelas' => 'required|max:50',
+            'ordo' => 'required|max:50',
+            'famili' => 'required|max:50',
+            'genus' => 'required|max:50',
+            'spesies' => 'required|max:50',
+            'daerah_endemis' => 'required|max:50',
+            'habitat_id' => 'required|max:50',
+            'karateristik' => 'required|max:500',
+            'deskripsi' => 'required|max:500',
             'gambar' => 'required|image|file|max:5120',
         ]);
 
@@ -94,10 +104,20 @@ class TanamanController extends Controller
 
         $validate = $request->validate([
             'nama_tanaman' => 'required|max:255',
-            'famili' => 'required',
-            'jenis' => 'required',
-            'habitat_id' => 'required',
-            'deskripsi' => 'required',
+            'kingdom' => 'required|max:50',
+            'subkingdom' => 'required|max:50',
+            'divisi' => 'required|max:50',
+            'subdivisi' => 'required|max:50',
+            'kelas' => 'required|max:50',
+            'subkelas' => 'required|max:50',
+            'ordo' => 'required|max:50',
+            'famili' => 'required|max:50',
+            'genus' => 'required|max:50',
+            'spesies' => 'required|max:50',
+            'daerah_endemis' => 'required|max:50',
+            'habitat_id' => 'required|max:50',
+            'karateristik' => 'required|max:500',
+            'deskripsi' => 'required|max:500',
         ]);
 
 
@@ -105,23 +125,41 @@ class TanamanController extends Controller
             $tanaman = Tanaman::FindOrFail($id);
             $tanaman->update([
                 'nama_tanaman' => $request->nama_tanaman,
+                'kingdom' => $request->kingdom,
+                'subkingdom' => $request->subkingdom,
+                'divisi' => $request->divisi,
+                'subdivisi' => $request->subdivisi,
+                'kelas' => $request->kelas,
+                'subkelas' => $request->subkelas,
+                'ordo' => $request->ordo,
                 'famili' => $request->famili,
-                'jenis' => $request->jenis,
-                'deskripsi' => $request->deskripsi,
+                'genus' => $request->genus,
+                'spesies' => $request->spesies,
+                'daerah_endemis' => $request->daerah_endemis,
                 'habitat_id' => $request->habitat_id,
-
+                'karateristik' => $request->karateristik,
+                'deskripsi' => $request->deskripsi,
 
             ]);
         } else {
             $tanaman = Tanaman::FindOrFail($id);
             Storage::delete($tanaman->gambar);
             $tanaman->update([
-
                 'nama_tanaman' => $request->nama_tanaman,
+                'kingdom' => $request->kingdom,
+                'subkingdom' => $request->subkingdom,
+                'divisi' => $request->divisi,
+                'subdivisi' => $request->subdivisi,
+                'kelas' => $request->kelas,
+                'subkelas' => $request->subkelas,
+                'ordo' => $request->ordo,
                 'famili' => $request->famili,
-                'jenis' => $request->jenis,
-                'deskripsi' => $request->deskripsi,
+                'genus' => $request->genus,
+                'spesies' => $request->spesies,
+                'daerah_endemis' => $request->daerah_endemis,
                 'habitat_id' => $request->habitat_id,
+                'karateristik' => $request->karateristik,
+                'deskripsi' => $request->deskripsi,
                 'gambar' => $request->file('gambar')->store('tanaman-image')
             ]);
         }

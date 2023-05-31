@@ -16,9 +16,19 @@ return new class extends Migration
         Schema::create('tanamans', function (Blueprint $table) {
             $table->id();
             $table->string('nama_tanaman', 50);
+            $table->string('kingdom', 50);
+            $table->string('subkingdom', 50);
+            $table->string('subdivisi', 50);
+            $table->string('divisi', 50);
+            $table->string('kelas', 50);
+            $table->string('subkelas', 50);
+            $table->string('ordo', 50);
             $table->string('famili', 50);
-            $table->string('jenis', 50);
-            $table->string('deskripsi');
+            $table->string('genus', 50);
+            $table->string('spesies', 50);
+            $table->string('daerah_endemis', 100);
+            $table->string('karateristik', 500);
+            $table->string('deskripsi', 500);
             $table->string('gambar');
             $table->foreignId('habitat_id');
         });

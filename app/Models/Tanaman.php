@@ -9,7 +9,24 @@ class Tanaman extends Model
 {
     use HasFactory;
     protected $table = 'tanamans';
-    protected $fillable = ['nama_tanaman', 'jenis', 'deskripsi', 'famili', 'gambar', 'habitat_id'];
+    protected $fillable = [
+        'nama_tanaman',
+        'kingdom',
+        'subkingdom',
+        'divisi',
+        'subdivisi',
+        'kelas',
+        'subkelas',
+        'ordo',
+        'famili',
+        'genus',
+        'spesies',
+        'daerah_endemis',
+        'habitat_id',
+        'karateristik',
+        'deskripsi',
+        'gambar',
+    ];
     public $timestamps = false;
 
     public function habitat()

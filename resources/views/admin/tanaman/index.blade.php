@@ -26,11 +26,15 @@
                                         Nama
                                     </th>
                                     <th>
-                                        Famili
+                                        Kingdom
                                     </th>
                                     <th>
-                                        Jenis
+                                        Divisi
                                     </th>
+                                    <th>
+                                        Kelas
+                                    </th>
+
                                     <th>
                                         Habitat
                                     </th>
@@ -43,8 +47,9 @@
                                         <tr>
                                             <th scope="row">{{ $loop->iteration }}</th>
                                             <td>{{ $tnm->nama_tanaman }}</td>
-                                            <td>{{ $tnm->famili }}</td>
-                                            <td>{{ $tnm->jenis }}</td>
+                                            <td>{{ $tnm->kingdom }}</td>
+                                            <td>{{ $tnm->divisi }}</td>
+                                            <td>{{ $tnm->kelas }}</td>
                                             <td>{{ $tnm->habitat->nama_habitat }}</td>
                                             <td class="text-right">
                                                 <div class="aksi">
