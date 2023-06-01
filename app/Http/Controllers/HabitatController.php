@@ -38,7 +38,7 @@ class HabitatController extends Controller
     {
         $validate = $request->validate([
             'nama_habitat' => 'required|max:50|unique:habitats',
-            'deskripsi_habitat' => 'required|max:255',
+            'deskripsi_habitat' => 'required|max:1000',
 
         ]);
 
@@ -81,7 +81,7 @@ class HabitatController extends Controller
     {
         $validate = $request->validate([
             'nama_habitat' => 'required|max:50',
-            'deskripsi_habitat' => 'required|max:255',
+            'deskripsi_habitat' => 'required|max:1000',
 
         ]);
         $habitat = Habitat::FindOrFail($id);

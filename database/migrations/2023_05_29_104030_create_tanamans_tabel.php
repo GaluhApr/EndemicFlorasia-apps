@@ -26,7 +26,7 @@ return new class extends Migration
             $table->string('famili', 50);
             $table->string('genus', 50);
             $table->string('spesies', 50);
-            $table->string('daerah_endemis', 100);
+            $table->string('daerah_endemis', 500);
             $table->string('karateristik', 1000);
             $table->string('deskripsi', 1000);
             $table->string('gambar');
