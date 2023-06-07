@@ -28,13 +28,21 @@
                  <a href="{{ url('habitat') }}">
                      <i class="now-ui-icons design_bullet-list-67"></i>
                      <p>List Habitat</p>
-                     {{-- <li>
-                 <a href="./icons.html">
+                 <!-- <a href="./icons.html">
                      <i class="now-ui-icons education_atom"></i>
-                     <p>Icons</p>
+                     <p>Icons</p> -->
                  </a>
              </li>
-             <li>
+             <li class="{{ Request::is('keanekaragaman*') ? 'active' : '' }}">
+                 <a href="{{ url('keanekaragaman') }}">
+                     <i class="now-ui-icons design_bullet-list-67"></i>
+                     <p>List Keanekaragaman</p>
+                 <!-- <a href="./icons.html">
+                     <i class="now-ui-icons education_atom"></i>
+                     <p>Icons</p> -->
+                 </a>
+             </li>
+            <!-- {{--<li>
                  <a href="./map.html">
                      <i class="now-ui-icons location_map-big"></i>
                      <p>Maps</p>
@@ -69,9 +77,10 @@
                      <i class="now-ui-icons arrows-1_cloud-download-93"></i>
                      <p>Upgrade to PRO</p>
                  </a>
-             </li> --}}
+             </li> --}} -->
                  </a>
              </li>
+            </li>
          </ul>
      </div>
  </div>
