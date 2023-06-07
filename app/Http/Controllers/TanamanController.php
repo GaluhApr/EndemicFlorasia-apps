@@ -54,10 +54,10 @@ class TanamanController extends Controller
             'famili' => 'required|max:50',
             'genus' => 'required|max:50',
             'spesies' => 'required|max:50',
-            'daerah_endemis' => 'required|max:50',
+            'daerah_endemis' => 'required|max:500',
             'habitat_id' => 'required|max:50',
-            'karateristik' => 'required|max:500',
-            'deskripsi' => 'required|max:500',
+            'karateristik' => 'required|max:3000',
+            'deskripsi' => 'required|max:3000',
             'gambar' => 'required|image|file|max:5120',
         ]);
 
@@ -114,10 +114,10 @@ class TanamanController extends Controller
             'famili' => 'required|max:50',
             'genus' => 'required|max:50',
             'spesies' => 'required|max:50',
-            'daerah_endemis' => 'required|max:50',
+            'daerah_endemis' => 'required|max:500',
             'habitat_id' => 'required|max:50',
-            'karateristik' => 'required|max:500',
-            'deskripsi' => 'required|max:500',
+            'karateristik' => 'required|max:3000',
+            'deskripsi' => 'required|max:3000',
         ]);
 
 

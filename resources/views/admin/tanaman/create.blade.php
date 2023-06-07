@@ -33,9 +33,9 @@
                                  <div class="col-md-3 pl-3">
                                      <div class="form-group">
                                          <label>Kingdom</label>
-                                         <select name="kingdom"
-                                             class="form-control  @error('kingdom') is-invalid @enderror">
-                                             <option value="">Pilih Kingdom</option>
+                                         <select name="kingdom" class="form-control  @error('kingdom') is-invalid @enderror"
+                                             placeholder="kingdom">
+                                             <option value="{{ old('kingdom') }}">{{ old('kingdom') }}</option>
                                              <option value="Plantae (tumbuhan)">Plantae (tumbuhan)</option>
                                              <option value="Fungi (jamur)">Fungi (jamur)</option>
                                              <option value="Protista (protista)">Protista (protista)</option>
@@ -52,7 +52,7 @@
                                          <label>Sub Kingdom</label>
                                          <select name="subkingdom"
                                              class="form-control  @error('subkingdom') is-invalid @enderror">
-                                             <option value="">Pilih Sub-Kingdom</option>
+                                             <option value="{{ old('subkingdom') }}">{{ old('subkingdom') }}</option>
                                              <option value="Tracheobionta">Tracheobionta</option>
                                              <option value="Bryobionta">Bryobionta</option>
                                              <option value="Chlorobionta">Chlorobionta(protista)</option>
@@ -74,7 +74,7 @@
                                      <div class="form-group">
                                          <label>Divisi</label>
                                          <select name="divisi" class="form-control  @error('divisi') is-invalid @enderror">
-                                             <option value="">Pilih divisi</option>
+                                             <option value="{{ old('divisi') }}">{{ old('divisi') }}</option>
                                              <option value="Magnoliophyta (Tumbuhan berkeping dua)">Magnoliophyta (Tumbuhan
                                                  berkeping dua)</option>
                                              <option value="Pteridophyta (Tumbuhan paku)">Pteridophyta (Tumbuhan paku)
@@ -97,7 +97,7 @@
                                          <label>Sub divisi</label>
                                          <select name="subdivisi"
                                              class="form-control  @error('subdivisi') is-invalid @enderror">
-                                             <option value="">Pilih sub-divisi</option>
+                                             <option value="{{ old('subdivisi') }}">{{ old('subdivisi') }}</option>
                                              <option value="Angiospermae (Tumbuhan berbunga)">Angiospermae (Tumbuhan
                                                  berbunga)</option>
                                              <option value="Gymnospermae (Tumbuhan berbiji terbuka)">Gymnospermae (Tumbuhan
@@ -119,7 +119,7 @@
                                      <div class="form-group">
                                          <label>Kelas</label>
                                          <select name="kelas" class="form-control  @error('kelas') is-invalid @enderror">
-                                             <option value="">Pilih Kelas</option>
+                                             <option value="{{ old('kelas') }}">{{ old('kelas') }}</option>
                                              <option value="Liliopsida (Monokotil)">Liliopsida (Monokotil)</option>
                                              <option value="Magnoliopsida (Dikotil)">Magnoliopsida (Dikotil)</option>
                                              <option value="Pinopsida (Tumbuhan konifer)">Pinopsida (Tumbuhan konifer)
@@ -223,7 +223,7 @@
                                          <label>Habitat</label>
                                          <select name="habitat_id"
                                              class="form-control  @error('habitat_id') is-invalid @enderror">
-                                             <option value="">Pilih Habitat</option>
+                                             <option value="{{ old('habitat') }}">{{ old('habitat') }}</option>
                                              @foreach ($habitat as $hbt)
                                                  <option value="{{ $hbt->id }}">{{ $hbt->nama_habitat }}</option>
                                              @endforeach
