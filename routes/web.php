@@ -4,6 +4,7 @@ use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TanamanController;
 use App\Http\Controllers\HabitatController;
+use App\Http\Controllers\AncamanController;
 use App\Http\Controllers\KeanekaragamanController;
 
 /*
@@ -20,10 +21,12 @@ use App\Http\Controllers\KeanekaragamanController;
 Route::get('/', [DashboardController::class, 'index']);
 Route::resource('/tanaman', TanamanController::class);
 Route::resource('/habitat', HabitatController::class);
+Route::resource('/ancaman', AncamanController::class);
 Route::resource('/keanekaragaman', KeanekaragamanController::class);
 
 
 //delete
 Route::get('/tanaman/delete/{id}', [TanamanController::class, 'delete'])->name('delete');
 Route::get('/habitat/delete/{id}', [HabitatController::class, 'delete'])->name('delete');
+Route::get('/ancaman/delete/{id}', [AncamanController::class, 'delete'])->name('delete');
 Route::get('/keanekaragaman/delete/{id}', [KeanekaragamanController::class, 'delete'])->name('delete');

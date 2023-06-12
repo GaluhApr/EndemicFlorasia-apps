@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Tanaman;
 use Illuminate\Http\Request;
 use App\Models\Habitat;
+use App\Models\Ancaman;
 use Illuminate\Support\Facades\Storage;
 use RealRashid\SweetAlert\Facades\Alert;
 
@@ -30,7 +31,8 @@ class TanamanController extends Controller
     public function create(Request $request)
     {
         $habitat = Habitat::all();
-        return view('admin.tanaman.create', compact('habitat', 'request'));
+        $ancaman = Ancaman::all();
+        return view('admin.tanaman.create', compact('habitat', 'ancaman', 'request'));
     }
 
     /**
@@ -56,6 +58,7 @@ class TanamanController extends Controller
             'spesies' => 'required|max:50',
             'daerah_endemis' => 'required|max:500',
             'habitat_id' => 'required|max:50',
+            'ancaman_id' => 'required|max:50',
             'karateristik' => 'required|max:3000',
             'deskripsi' => 'required|max:3000',
             'gambar' => 'required|image|file|max:5120',
@@ -116,6 +119,7 @@ class TanamanController extends Controller
             'spesies' => 'required|max:50',
             'daerah_endemis' => 'required|max:500',
             'habitat_id' => 'required|max:50',
+            'ancaman_id' => 'required|max:50',
             'karateristik' => 'required|max:3000',
             'deskripsi' => 'required|max:3000',
         ]);
@@ -137,6 +141,7 @@ class TanamanController extends Controller
                 'spesies' => $request->spesies,
                 'daerah_endemis' => $request->daerah_endemis,
                 'habitat_id' => $request->habitat_id,
+                'ancaman_id' => $request->ancaman_id,
                 'karateristik' => $request->karateristik,
                 'deskripsi' => $request->deskripsi,
 
@@ -158,6 +163,7 @@ class TanamanController extends Controller
                 'spesies' => $request->spesies,
                 'daerah_endemis' => $request->daerah_endemis,
                 'habitat_id' => $request->habitat_id,
+                'ancaman_id' => $request->ancaman_id,
                 'karateristik' => $request->karateristik,
                 'deskripsi' => $request->deskripsi,
                 'gambar' => $request->file('gambar')->store('tanaman-image')

@@ -42,6 +42,15 @@
                      <p>Icons</p> -->
                  </a>
              </li>
+             <li class="{{ Request::is('ancaman*') ? 'active' : '' }}">
+                 <a href="{{ url('ancaman') }}">
+                     <i class="now-ui-icons design_bullet-list-67"></i>
+                     <p>List Ancaman</p>
+                 <!-- <a href="./icons.html">
+                     <i class="now-ui-icons education_atom"></i>
+                     <p>Icons</p> -->
+                 </a>
+             </li>
             <!-- {{--<li>
                  <a href="./map.html">
                      <i class="now-ui-icons location_map-big"></i>

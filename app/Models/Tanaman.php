@@ -23,6 +23,7 @@ class Tanaman extends Model
         'spesies',
         'daerah_endemis',
         'habitat_id',
+        'ancaman_id',
         'karateristik',
         'deskripsi',
         'gambar',
@@ -33,5 +34,11 @@ class Tanaman extends Model
     {
 
         return $this->belongsTo(Habitat::class);
+    }
+    
+    public function ancaman()
+    {
+
+        return $this->belongsTo(Ancaman::class);
     }
 }

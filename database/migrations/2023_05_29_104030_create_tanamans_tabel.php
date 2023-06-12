@@ -31,6 +31,7 @@ return new class extends Migration
             $table->string('deskripsi', 3000);
             $table->string('gambar');
             $table->foreignId('habitat_id');
+            $table->foreignId('ancaman_id');
         });
     }
 
