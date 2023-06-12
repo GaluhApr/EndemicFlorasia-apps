@@ -17,12 +17,13 @@
                         <form action="{{ '/ancaman' }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="row">
-                                <div class="col-md-7 pr-1">
+                                <div class="col-md-7 ">
                                     <div class="form-group">
                                         <label>Jenis Ancaman</label>
                                         <input type="text" name="jenis_ancaman"
                                             class="form-control  @error('jenis_ancaman') is-invalid @enderror"
-                                            placeholder="Masukan nama jenis ancaman" required>
+                                            value="{{ old('jenis_ancaman') }}" placeholder="Masukan nama jenis ancaman"
+                                            required>
                                         @error('jenis_ancaman')
                                             <div class="invalid-feedback">
                                                 {{ $message }}
@@ -33,12 +34,13 @@
 
                             </div>
                             <div class="row pt-3">
-                                <div class="col-md-7 pr-1">
+                                <div class="col-md-7 ">
                                     <div class="form-group">
                                         <label>Tingkat</label>
                                         <input type="text" name="tingkat_ancaman"
                                             class="form-control  @error('tingkat_ancaman') is-invalid @enderror"
-                                            placeholder="Masukan tingkat ancaman" required>
+                                            value="{{ old('tingkat_ancaman') }}" placeholder="Masukan tingkat ancaman"
+                                            required>
                                         @error('tingkat_ancaman')
                                             <div class="invalid-feedback">
                                                 {{ $message }}
@@ -48,7 +50,7 @@
                                 </div>
 
                             </div>
-                            
+
 
                             <button type="submit" class="btn btn-primary mt-5 ">Submit</button>
                         </form>

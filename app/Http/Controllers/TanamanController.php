@@ -90,8 +90,9 @@ class TanamanController extends Controller
     public function edit($id)
     {
         $habitat = Habitat::all();
+        $ancaman = Ancaman::all();
         $tnm = Tanaman::find($id);
-        return view('admin.tanaman.edit', compact('tnm', 'habitat'));
+        return view('admin.tanaman.edit', compact('tnm', 'habitat', 'ancaman'));
     }
 
     /**

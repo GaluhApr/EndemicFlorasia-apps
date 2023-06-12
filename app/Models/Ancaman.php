@@ -14,4 +14,3 @@ class Ancaman extends Model
     protected $fillable = ['jenis_ancaman', 'tingkat_ancaman'];
     public $timestamps = false;
 }
-

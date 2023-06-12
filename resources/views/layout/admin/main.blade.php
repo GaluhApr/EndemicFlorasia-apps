@@ -22,7 +22,6 @@
     <link href="/assets/demo/demo.css" rel="stylesheet" />
     <link href="/sweetalert2/sweetalert2.min.css" rel="stylesheet" />
 
-
 </head>
 
 <body class="">
@@ -59,9 +58,12 @@
     <!--  Notifications Plugin    -->
     <script src="/assets/js/plugins/bootstrap-notify.js"></script>
     <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
-    <script src="/assets/js/now-ui-dashboard.min.js?v=1.5.0" type="text/javascript"></script><!-- Now Ui Dashboard DEMO methods, don't include it in your project! -->
+    <script src="/assets/js/now-ui-dashboard.min.js?v=1.5.0" type="text/javascript"></script>
+    <!-- Now Ui Dashboard DEMO methods, don't include it in your project! -->
 
+    <script src="/sweetalert2/sweetalert2.min.js"></script>
 
+    <script src="/assets/js/notification.js"></script>
 
 
 </body>

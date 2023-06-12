@@ -11,6 +11,12 @@ class Keanekaragaman extends Model
 {
     use HasApiTokens, HasFactory, Notifiable;
     protected $table = 'keanekaragamans';
-    protected $fillable = ['keanekaragaman', 'tahun'];
+    protected $fillable = ['tanaman_id', 'keanekaragaman', 'tahun'];
     public $timestamps = false;
+
+    public function Tanaman()
+    {
+
+        return $this->belongsTo(Tanaman::class);
+    }
 }

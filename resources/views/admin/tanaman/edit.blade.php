@@ -238,6 +238,24 @@
                                          @enderror
                                      </div>
                                  </div>
+                                 <div class="col-md-4 ">
+                                     <div class="form-group">
+                                         <label>Ancaman</label>
+                                         <select name="ancaman_id"
+                                             class="form-control  @error('ancaman_id') is-invalid @enderror">
+                                             <option value="{{ $tnm->ancaman_id }}">{{ $tnm->ancaman->jenis_ancaman }}
+                                             </option>
+                                             @foreach ($ancaman as $anc)
+                                                 <option value="{{ $anc->id }}">{{ $anc->jenis_ancaman }}</option>
+                                             @endforeach
+                                         </select>
+                                         @error('ancaman_id')
+                                             <div class="invalid-feedback">
+                                                 {{ $message }}
+                                             </div>
+                                         @enderror
+                                     </div>
+                                 </div>
                              </div>
                              <div class="row pt-3">
                                  <div class="col-md-12">

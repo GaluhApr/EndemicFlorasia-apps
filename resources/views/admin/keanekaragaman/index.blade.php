@@ -26,7 +26,7 @@
                                         Keanekaragaman
                                     </th>
                                     <th>
-                                     Tahun
+                                        Tahun
                                     </th>
                                     <th class="text-right">
                                         aksi
@@ -37,14 +37,15 @@
                                         <tr>
                                             <th scope="row">{{ $loop->iteration }}</th>
                                             <td>{{ $keanekaragaman->keanekaragaman }}</td>
-                                            <td>{{ $keanekaragaman->tahun}}</td>
+                                            <td>{{ $keanekaragaman->tahun }}</td>
                                             <td class="text-right">
                                                 <div class="aksi">
                                                     <a href="{{ url('keanekaragaman/' . $keanekaragaman->id . '/edit') }}"><button
                                                             class="now-ui-icons shopping_tag-content btn btn-success border-0 p-2"></button></a>
-                                                    <a href="keanekaragaman/delete/{{ $keanekaragman->id }}"><button
+                                                    <a href="keanekaragaman/delete/{{ $keanekaragaman->id }}"><button
                                                             class="btn btn-danger border-0 p-2 now-ui-icons ui-1_simple-remove"
-                                                            id="btn-hapus-keanekaragaman" data-id-keanekaragaman={{ $keanekaragaman->id }}>
+                                                            id="btn-hapus-keanekaragaman"
+                                                            data-id-keanekaragaman={{ $keanekaragaman->id }}>
                                                             <span data-feather="x-circle"></span></button>
                                                 </div>
                                             </td>

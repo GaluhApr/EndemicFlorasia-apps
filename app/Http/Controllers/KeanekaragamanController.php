@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Keanekaragaman;
+use App\Models\Tanaman;
 use Illuminate\Http\Request;
 
 class KeanekaragamanController extends Controller
@@ -25,7 +26,8 @@ class KeanekaragamanController extends Controller
      */
     public function create()
     {
-        return view('admin.keanekaragaman.create');
+        $tanaman = Tanaman::all();
+        return view('admin.keanekaragaman.create', compact('tanaman'));
     }
 
     /**
@@ -37,7 +39,8 @@ class KeanekaragamanController extends Controller
     public function store(Request $request)
     {
         $validate = $request->validate([
-            'nama_keanekaragaman' => 'required|max:50|unique:keanekaragamans,keanekaragaman',
+            'tanaman_id' => 'required',
+            'keanekaragaman' => 'required|max:50|unique:keanekaragamans',
             'tahun' => 'required|numeric|min:1900|max:2099',
 
         ]);
@@ -66,8 +69,9 @@ class KeanekaragamanController extends Controller
      */
     public function edit($id)
     {
+        $tanaman = Tanaman::all();
         $keanekaragaman = Keanekaragaman::find($id);
-        return view('admin.keanekaragaman.edit', compact('keanekaragaman'));
+        return view('admin.keanekaragaman.edit', compact('keanekaragaman', 'tanaman'));
     }
 
     /**
@@ -80,8 +84,9 @@ class KeanekaragamanController extends Controller
     public function update(Request $request, $id)
     {
         $validate = $request->validate([
-            'nama_habitat' => 'required|max:50',
-            'deskripsi_habitat' => 'required|max:255',
+            'tanaman_id' => 'required|max:50',
+            'keanekaragaman' => 'required|max:50',
+            'tahun' => 'required|max:255',
 
         ]);
         $keanekaragaman = Keanekaragaman::FindOrFail($id);

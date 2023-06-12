@@ -235,7 +235,7 @@
                                          @enderror
                                      </div>
                                  </div>
-                                 <div class="col-md-4 pr-1">
+                                 <div class="col-md-4 ">
                                      <div class="form-group">
                                          <label>Ancaman</label>
                                          <select name="ancaman_id"
