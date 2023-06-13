@@ -6,6 +6,8 @@ use App\Http\Controllers\TanamanController;
 use App\Http\Controllers\HabitatController;
 use App\Http\Controllers\AncamanController;
 use App\Http\Controllers\KeanekaragamanController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,15 +20,20 @@ use App\Http\Controllers\KeanekaragamanController;
 |
 */
 
-Route::get('/', [DashboardController::class, 'index']);
-Route::resource('/tanaman', TanamanController::class);
-Route::resource('/habitat', HabitatController::class);
-Route::resource('/ancaman', AncamanController::class);
-Route::resource('/keanekaragaman', KeanekaragamanController::class);
+Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');
+Route::resource('/tanaman', TanamanController::class)->middleware('auth');
+Route::resource('/habitat', HabitatController::class)->middleware('auth');
+Route::resource('/ancaman', AncamanController::class)->middleware('auth');
+Route::resource('/keanekaragaman', KeanekaragamanController::class)->middleware('auth');
 
+Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
+Route::post('/login', [LoginController::class, 'authenticate']);
+Route::post('/logout', [LoginController::class, 'logout']);
 
+Route::get('/register', [RegisterController::class, 'index']);
+Route::post('/register', [RegisterController::class, 'store']);
 //delete
-Route::get('/tanaman/delete/{id}', [TanamanController::class, 'delete'])->name('delete');
-Route::get('/habitat/delete/{id}', [HabitatController::class, 'delete'])->name('delete');
-Route::get('/ancaman/delete/{id}', [AncamanController::class, 'delete'])->name('delete');
-Route::get('/keanekaragaman/delete/{id}', [KeanekaragamanController::class, 'delete'])->name('delete');
+Route::get('/tanaman/delete/{id}', [TanamanController::class, 'delete'])->name('delete')->middleware('auth');
+Route::get('/habitat/delete/{id}', [HabitatController::class, 'delete'])->name('delete')->middleware('auth');
+Route::get('/ancaman/delete/{id}', [AncamanController::class, 'delete'])->name('delete')->middleware('auth');
+Route::get('/keanekaragaman/delete/{id}', [KeanekaragamanController::class, 'delete'])->name('delete')->middleware('auth');

@@ -18,7 +18,7 @@
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navigation">
 
-            <form method="POST" action="">
+            <form method="POST" action="/logout">
                 @csrf
                 <button class="btn btn-primary  text-light" type="submit">Logout</button>
             </form>
