@@ -20,6 +20,10 @@ use App\Http\Controllers\RegisterController;
 |
 */
 
+Route::prefix('')->group(function (){
+    Route::get('/', function () {return view('frontend.index');})->name('home');
+});
+
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');
 Route::resource('/tanaman', TanamanController::class)->middleware('auth');
 Route::resource('/habitat', HabitatController::class)->middleware('auth');
@@ -32,6 +36,7 @@ Route::post('/logout', [LoginController::class, 'logout']);
 
 Route::get('/register', [RegisterController::class, 'index']);
 Route::post('/register', [RegisterController::class, 'store']);
+
 //delete
 Route::get('/tanaman/delete/{id}', [TanamanController::class, 'delete'])->name('delete')->middleware('auth');
 Route::get('/habitat/delete/{id}', [HabitatController::class, 'delete'])->name('delete')->middleware('auth');
