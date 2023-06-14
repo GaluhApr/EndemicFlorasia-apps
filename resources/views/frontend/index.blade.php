@@ -1,172 +1,179 @@
 @extends('frontend.component.index2')
 @section('content')
+    <!-- ======= Hero Section ======= -->
+    <section id="hero">
+        <div class="hero-container" data-aos="fade-up">
+            <h1>Selamat Datang di Endemic Florasia</h1>
+            <h2>Temukan Keindahan Flora Endemik Di Asia</h2>
+            <a href="#services" class="btn-get-started scrollto">Lihat Tanaman</a>
+        </div>
+    </section><!-- End Hero -->
 
-<!-- ======= Hero Section ======= -->
-<section id="hero">
-  <div class="hero-container" data-aos="fade-up">
-    <h1>Selamat Datang di Endemic Florasia</h1>
-    <h2>Temukan Keindahan Flora Endemik</h2>
-    <a href="#services" class="btn-get-started scrollto">Lihat Tanaman</a>
-  </div>
-</section><!-- End Hero -->
+    <main id="main">
 
-<main id="main">
+        <!-- ======= About Section ======= -->
+        <section id="about" class="about">
+            <div class="container">
 
-  <!-- ======= About Section ======= -->
-  <section id="about" class="about">
-    <div class="container">
+                <div class="row">
 
-      <div class="row justify-content-end">
-        <div class="col-lg-11">
-          <div class="row justify-content-end">
+                    <div class="col-lg-12 p-5 content">
+                        <h3>Apa itu tanaman endemik?</h3>
+                        <p>
+                            Tanaman endemik adalah jenis tanaman yang hanya ditemukan secara alami di daerah atau wilayah
+                            geografis tertentu dan tidak ditemukan di tempat lain di dunia. Mereka merupakan bagian dari
+                            keanekaragaman hayati lokal dan sering kali memiliki nilai ekologis, budaya, dan ekonomi yang
+                            tinggi.
+                        </p>
+                        <h3>
+                            Lalu, apa itu Endemic Florasia?
+                        </h3>
+                        <p>
+                            Endemic Florasia adalah sebuah inovasi untuk menjelajahi dan mempelajari tanaman endemik yang
+                            khas dari benua Asia. Dengan akses ke berbagai informasi tentang tanaman endemik Asia, aplikasi
+                            ini menawarkan wawasan mendalam tentang keajaiban alam dan keanekaragaman hayati yang luar biasa
+                            di wilayah tersebut.
+                        </p>
+                        <h3>
+                            Fitur-fitur
+                        </h3>
+                        <ul>
+                            <li><i class="bx bx-check"></i>Database Keanekaragaman Tanaman: Aplikasi ini memiliki database
+                                yang kaya akan informasi tentang tanaman endemik Asia.</li>
+                            <li><i class="bx bx-check"></i>Edukasi dan Keterlibatan Masyarakat: Aplikasi ini berfungsi
+                                sebagai sumber pembelajaran yang interaktif dan mengedukasi pengguna tentang pentingnya
+                                pelestarian tanaman endemik.</li>
+                            <li><i class="bx bx-check"></i>Koneksi dengan Ahli dan Peneliti: Aplikasi ini memfasilitasi
+                                kolaborasi antara pengguna dan para ahli di bidang botani dan konservasi.</li>
+                        </ul>
+                    </div>
 
-            <div class="col-lg-3 col-md-5 col-6 d-md-flex align-items-md-stretch">
-              <div class="count-box py-5">
-                <i class="bi bi-tree"></i>
-                <span data-purecounter-start="0" data-purecounter-end="65" class="purecounter">0</span>
-                <p>Tanaman Endemik</p>
-              </div>
+                </div>
+
             </div>
+        </section><!-- End About Section -->
 
-            <div class="col-lg-3 col-md-5 col-6 d-md-flex align-items-md-stretch">
-              <div class="count-box py-5">
-                <i class="bi bi-house"></i>
-                <span data-purecounter-start="0" data-purecounter-end="85" class="purecounter">0</span>
-                <p>Habitat</p>
-              </div>
+        <!-- ======= Cta Section ======= -->
+        <section id="cta" class="cta">
+            <div class="container" data-aos="fade-in">
+
+                <div class="text-center">
+                    <h3>Hubungi Ahli Botani</h3>
+                    <p> Jika Anda memiliki pertanyaan atau butuh bantuan terkait tanaman endemik, silakan hubungi ahli
+                        botani kami.</p>
+                    <a class="cta-btn" href="#footer">Kontak</a>
+                </div>
+
             </div>
+        </section><!-- End Cta Section -->
 
-            <div class="col-lg-3 col-md-5 col-6 d-md-flex align-items-md-stretch">
-              <div class="count-box pb-5 pt-0 pt-lg-5">
-                <i class="bi bi-palette"></i>
-                <span data-purecounter-start="0" data-purecounter-end="27" class="purecounter">0</span>
-                <p>Keanekaragaman</p>
-              </div>
+        <!-- ======= Services Section ======= -->
+        <section id="services" class="services">
+            <div class="container">
+
+                <div class="section-title pt-5" data-aos="fade-up">
+                    <h2>Daftar Tanaman Endemik</h2>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="search-box">
+                            <form action="#" method="GET" data-aos="fade-up">
+                                <input type="text" style="width: 100%" name="search"
+                                    placeholder="Cari tanaman endemik...">
+                                <button type="submit"><i class="bi bi-search"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="icon-box" data-aos="fade-up">
+                            <div class="icon"><img src="{{ asset('frontend/assets/img/flag/indonesia.png') }}"
+                                    style="width: 10%; margin-left: 50px; float: left;" alt="Indonesia" srcset="">
+                            </div>
+                            <h4 class="title"><a href="">indonesia</a></h4>
+                            <p class="description"></p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="icon-box" data-aos="fade-up">
+                            <div class="icon"><img src="{{ asset('frontend/assets/img/flag/malaysia.png') }}"
+                                    style="width: 10%; margin-left: 50px; float: left;" alt="Malaysia" srcset=""></i>
+                            </div>
+                            <h4 class="title"><a href="">Malaysia</a></h4>
+                            <p class="description"></p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="icon-box" data-aos="fade-up">
+                            <div class="icon"><img src="{{ asset('frontend/assets/img/flag/vietnam.png') }}"
+                                    style="width: 10%; margin-left: 50px; float: left;" alt="Vietnam" srcset=""></i>
+                            </div>
+                            <h4 class="title"><a href="">Vietnam</a></h4>
+                            <p class="description"></p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="icon-box" data-aos="fade-up">
+                            <div class="icon"><img src="{{ asset('frontend/assets/img/flag/thailand.png') }}"
+                                    style="width: 10%; margin-left: 50px; float: left;" alt="Thailand" srcset=""></i>
+                            </div>
+                            <h4 class="title"><a href="">Thailand</a></h4>
+                            <p class="description"></p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="icon-box" data-aos="fade-up">
+                            <div class="icon"><img src="{{ asset('frontend/assets/img/flag/cambodia.png') }}"
+                                    style="width: 10%; margin-left: 50px; float: left;" alt="Cambodia" srcset=""></i>
+                            </div>
+                            <h4 class="title"><a href="">Cambodia</a></h4>
+                            <p class="description"></p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="icon-box" data-aos="fade-up">
+                            <div class="icon"><img src="{{ asset('frontend/assets/img/flag/laos.png') }}"
+                                    style="width: 10%; margin-left: 50px; float: left;" alt="Laos"
+                                    srcset=""></i>
+                            </div>
+                            <h4 class="title"><a href="">Laos</a></h4>
+                            <p class="description"></p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="icon-box" data-aos="fade-up">
+                            <div class="icon"><img src="{{ asset('frontend/assets/img/flag/philippines.png') }}"
+                                    style="width: 10%; margin-left: 50px; float: left;" alt="Philippines"
+                                    srcset=""></i>
+                            </div>
+                            <h4 class="title"><a href="">Philippines</a></h4>
+                            <p class="description"></p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="icon-box" data-aos="fade-up">
+                            <div class="icon"><img src="{{ asset('frontend/assets/img/flag/singapore.png') }}"
+                                    style="width: 10%; margin-left: 50px; float: left;" alt="Singapore"
+                                    srcset=""></i>
+                            </div>
+                            <h4 class="title"><a href="">Singapore</a></h4>
+                            <p class="description"></p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-
-            <div class="col-lg-3 col-md-5 col-6 d-md-flex align-items-md-stretch">
-              <div class="count-box pb-5 pt-0 pt-lg-5">
-                <i class="bi bi-bug"></i>
-                <span data-purecounter-start="0" data-purecounter-end="22" class="purecounter">0</span>
-                <p>Ancaman</p>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-
-        <div class="col-lg-6 video-box align-self-baseline position-relative">
-          <img src="{{ asset('assets/img/about.jpg') }}" class="img-fluid" alt="">
-          <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="glightbox play-btn mb-4"></a>
-        </div>
-
-        <div class="col-lg-6 pt-3 pt-lg-0 content">
-          <h3>Temukan Tanaman Endemik yang Menakjubkan</h3>
-          <p class="fst-italic">
-            Menjelajahi keindahan flora endemik yang langka dan unik di Asia Tenggara.
-          </p>
-          <ul>
-            <li><i class="bx bx-check-double"></i> Menawarkan tanaman endemik yang hanya ditemukan di wilayah tertentu.</li>
-            <li><i class="bx bx-check-double"></i> Menyediakan informasi tentang habitat, keanekaragaman, dan ancaman yang dihadapi.</li>
-            <li><i class="bx bx-check-double"></i> Mengedukasi dan mempromosikan kepedulian terhadap keanekaragaman hayati.</li>
-            <li><i class="bx bx-check-double"></i> Memfasilitasi penelusuran tanaman endemik berdasarkan keanekaragaman.</li>
-          </ul>
-          <p>
-            Jelajahi situs kami dan temukan tanaman endemik yang menakjubkan serta informasi lengkap tentang keunikan dan pentingnya
-            menjaga kelestariannya. Bergabunglah dengan kami dalam upaya melestarikan flora endemik untuk generasi mendatang.
-          </p>
-        </div>
-
-      </div>
-
-    </div>
-  </section><!-- End About Section -->
-
-  <!-- ======= Cta Section ======= -->
-  <section id="cta" class="cta">
-    <div class="container" data-aos="fade-in">
-
-      <div class="text-center">
-        <h3>Hubungi Ahli Botani</h3>
-        <p> Jika Anda memiliki pertanyaan atau butuh bantuan terkait tanaman endemik, silakan hubungi ahli botani kami.</p>
-        <a class="cta-btn" href="#footer">Kontak</a>
-      </div>
-
-    </div>
-  </section><!-- End Cta Section -->
-
-  <!-- ======= Services Section ======= -->
-  <section id="services" class="services">
-  <div class="container">
-
-    <div class="section-title pt-5" data-aos="fade-up">
-      <h2>Daftar Tanaman Endemik</h2>
-    </div>
-
-    <div class="row">
-      <div class="col-md-12">
-        <div class="search-box">
-          <form action="#" method="GET" data-aos="fade-up">
-            <input type="text" name="search" placeholder="Cari tanaman endemik...">
-            <button type="submit"><i class="bi bi-search"></i></button>
-          </form>
-        </div>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-md-6">
-        <div class="icon-box" data-aos="fade-up">
-          <div class="icon"><i class="bi bi-tree" style="color: #ff689b;"></i></div>
-          <h4 class="title"><a href="">Tanaman 1</a></h4>
-          <p class="description">Deskripsi tanaman endemik 1.</p>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="icon-box" data-aos="fade-up">
-          <div class="icon"><i class="bi bi-tree" style="color: #e9bf06;"></i></div>
-          <h4 class="title"><a href="">Tanaman 2</a></h4>
-          <p class="description">Deskripsi tanaman endemik 2.</p>
-        </div>
-      </div>
-
-      <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
-        <div class="icon-box">
-          <div class="icon"><i class="bi bi-tree" style="color: #3fcdc7;"></i></div>
-          <h4 class="title"><a href="">Tanaman 3</a></h4>
-          <p class="description">Deskripsi tanaman endemik 3.</p>
-        </div>
-      </div>
-      <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
-        <div class="icon-box">
-          <div class="icon"><i class="bi bi-tree" style="color:#41cf2e;"></i></div>
-          <h4 class="title"><a href="">Tanaman 4</a></h4>
-          <p class="description">Deskripsi tanaman endemik 4.</p>
-        </div>
-      </div>
-
-      <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
-        <div class="icon-box">
-          <div class="icon"><i class="bi bi-tree" style="color: #d6ff22;"></i></div>
-          <h4 class="title"><a href="">Tanaman 5</a></h4>
-          <p class="description">Deskripsi tanaman endemik 5.</p>
-        </div>
-      </div>
-      <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
-        <div class="icon-box">
-          <div class="icon"><i class="bi bi-tree" style="color: #4680ff;"></i></div>
-          <h4 class="title"><a href="">Tanaman 6</a></h4>
-          <p class="description">Deskripsi tanaman endemik 6.</p>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section><!-- End Services Section -->
+        </section><!-- End Services Section -->
 
 
-</main><!-- End #main -->
+    </main><!-- End #main -->
 @endsection

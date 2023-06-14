@@ -29,7 +29,7 @@
           <!-- <li><a href="pricing.html">Pricing</a></li>
           <li><a href="portfolio.html">Portfolio</a></li>
           <li><a href="blog.html">Blog</a></li> -->
-          <li><a href="">Kontak</a></li>
+          <li><a href="">Tentang Kami</a></li>
 
           <li><a class="getstarted" href="#about">Get Started</a></li>
         </ul>
