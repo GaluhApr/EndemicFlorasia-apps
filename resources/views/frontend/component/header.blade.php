@@ -9,8 +9,8 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="active" href="index.html">Home</a></li>
-          <li class="dropdown"><a href="#"><span>About</span> <i class="bi bi-chevron-down"></i></a>
+          <li><a class="active" href="/">Home</a></li>
+          <!-- <li class="dropdown"><a href="#"><span>About</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="about.html">About</a></li>
               <li><a href="team.html">Team</a></li>
@@ -24,14 +24,14 @@
                 </ul>
               </li>
             </ul>
-          </li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="pricing.html">Pricing</a></li>
+          </li> -->
+          <li><a href="#services">Tanaman</a></li>
+          <!-- <li><a href="pricing.html">Pricing</a></li>
           <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="blog.html">Blog</a></li> -->
+          <li><a href="">Kontak</a></li>
 
-          <li><a class="getstarted" href="about.html">Get Started</a></li>
+          <li><a class="getstarted" href="#about">Get Started</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
