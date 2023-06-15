@@ -1,7 +1,7 @@
 @extends('layout.admin.main', [
     'namePage' => 'List  Tanaman',
 ])
-@section('title', 'List-tanaman')
+@section('title', ' EndemicFlorasia | Tanaman')
 @section('content')
     <div class="panel-header panel-header-sm">
     </div>

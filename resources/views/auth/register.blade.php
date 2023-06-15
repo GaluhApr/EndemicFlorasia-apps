@@ -14,7 +14,12 @@
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/sign-in/">
 
     <link href="/assets/css/login.css" rel="stylesheet">
-    <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- CSS Files -->
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/assets/css/now-ui-dashboard.css?v=1.5.0" rel="stylesheet" />
+    <!-- CSS Just for demo purpose, don't include it in your project -->
+    <link href="/assets/demo/demo.css" rel="stylesheet" />
+    <link href="/sweetalert2/sweetalert2.min.css" rel="stylesheet" />
 
     <style>
         .bd-placeholder-img {
@@ -163,6 +168,7 @@
 
                     <button class="btn btn-primary w-100 py-2" type="submit">Login</button>
                 </div>
+            </div>
         </form>
     </main>
     <script src="/assets/js/bootstrap.bundle.min.js"></script>

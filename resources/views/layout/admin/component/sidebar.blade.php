@@ -12,8 +12,8 @@
      </div>
      <div class="sidebar-wrapper" id="sidebar-wrapper">
          <ul class="nav">
-             <li class="{{ Request::is('/') ? 'active' : '' }}">
-                 <a href="/">
+             <li class="{{ Request::is('dashboard') ? 'active' : '' }}">
+                 <a href="{{ url('dashboard') }}">
                      <i class="now-ui-icons design_app"></i>
                      <p>Dashboard</p>
                  </a>
@@ -28,7 +28,7 @@
                  <a href="{{ url('habitat') }}">
                      <i class="now-ui-icons design_bullet-list-67"></i>
                      <p>List Habitat</p>
-                 <!-- <a href="./icons.html">
+                     <!-- <a href="./icons.html">
                      <i class="now-ui-icons education_atom"></i>
                      <p>Icons</p> -->
                  </a>
@@ -37,7 +37,7 @@
                  <a href="{{ url('keanekaragaman') }}">
                      <i class="now-ui-icons design_bullet-list-67"></i>
                      <p>List Keanekaragaman</p>
-                 <!-- <a href="./icons.html">
+                     <!-- <a href="./icons.html">
                      <i class="now-ui-icons education_atom"></i>
                      <p>Icons</p> -->
                  </a>
@@ -46,12 +46,12 @@
                  <a href="{{ url('ancaman') }}">
                      <i class="now-ui-icons design_bullet-list-67"></i>
                      <p>List Ancaman</p>
-                 <!-- <a href="./icons.html">
+                     <!-- <a href="./icons.html">
                      <i class="now-ui-icons education_atom"></i>
                      <p>Icons</p> -->
                  </a>
              </li>
-            <!-- {{--<li>
+             <!-- {{-- <li>
                  <a href="./map.html">
                      <i class="now-ui-icons location_map-big"></i>
                      <p>Maps</p>
@@ -87,9 +87,9 @@
                      <p>Upgrade to PRO</p>
                  </a>
              </li> --}} -->
-                 </a>
+             </a>
              </li>
-            </li>
+             </li>
          </ul>
      </div>
  </div>

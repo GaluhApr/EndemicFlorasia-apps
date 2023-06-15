@@ -1,17 +1,26 @@
 body {
     margin: auto;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
 }
 
 .card {
     border: none;
     padding: 30px;
-    border-radius: 20px;
+    border-radius: 30px;
     margin: 16px 0;
   box-shadow: 5px 3px 20px 4px rgba(0, 0, 0, 0.2);
 }
 html,
 body {
   height: 100%;
+}
+h1 {
+    text-align: center;
 }
 
 .form-signin {
@@ -23,15 +32,7 @@ body {
   z-index: 2;
 }
 
-.form-signin input[type="email"] {
-  margin-bottom: -1px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-}
-
-.form-signin input[type="password"] {
-  margin-bottom: 10px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
+.form-group {
+    padding: 5px 10px 5px 10px;
 }
 

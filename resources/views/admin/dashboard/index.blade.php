@@ -1,7 +1,7 @@
 @extends('layout.admin.main', [
     'namePage' => 'Dashboard',
 ])
-@section('title', 'Dashboard')
+@section('title', ' EndemicFlorasia | Dashboard')
 @section('content')
 
     <div class="panel-header panel-header-sm">
@@ -45,7 +45,7 @@
                             <canvas id="barChartSimpleGradientsNumbers"></canvas>
                         </div>
                     </div>
-        </div>
-    </div>
+                </div>
+            </div>
 
-@endsection
+        @endsection
