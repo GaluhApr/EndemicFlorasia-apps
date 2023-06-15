@@ -6,34 +6,33 @@
             <div class="container">
                 <div class="breadcrumb-hero">
                     <h2>Tanaman Endemik</h2>
-                    <p>Est dolorum ut non facere possimus quibusdam eligendi voluptatem. Quia id aut similique quia voluptas
-                        sit quaerat debitis. Rerum omnis ipsam aperiam consequatur laboriosam nemo harum praesentium. </p>
+                    <p>Temukan informasi tentang tanaman endemik di daerah Anda. </p>
                 </div>
             </div>
         </div>
         <div class="container">
             <ol>
-                <li><a href="index.html">Home</a></li>
-                <li>Portolio</li>
+                <li><a href="index.html">Beranda</a></li>
+                <li>Tanaman</li>
             </ol>
         </div>
     </section><!-- End Breadcrumbs -->
 
     <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio">
+    <section id="card-tanaman" class="card-tanaman">
         <div class="container">
 
             <div class="row portfolio-container" data-aos="fade-up">
-                @foreach ($tanaman as $key => $tnmn)
-                    <div class="col-lg-3 col-md-6 portfolio-item filter-app">
-                        <div class="portfolio-wrap">
-                            <img src="{{ asset('storage/' . $tnmn->gambar) }}" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>{{ $tnmn->nama_tanaman }}</h4>
-                                <p>{{ $tnmn->daerah_endemis }}</p>
+                @foreach ($tanaman as $tanaman)
+                    <a href="{{ route('detail', $tanaman->id) }}" class="col-lg-3 col-md-6 portfolio-item filter-app">
+                        <div class="tanaman-wrap">
+                            <img src="{{ asset('storage/' . $tanaman->gambar) }}" class="img-fluid" alt="">
+                            <div class="tanaman-info">
+                                <h4>{{ $tanaman->nama_tanaman }}</h4>
+                                <p>{{ $tanaman->daerah_endemis }}</p>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 @endforeach
             </div>
 

@@ -145,6 +145,38 @@ h6 {
   background-color: #94c045;
 }
 
+.card-tanaman {
+  margin-bottom: 20px;
+}
+
+.tanaman-info {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+}
+
+.detail-tanaman {
+  margin-bottom: 20px;
+}
+
+.detail-tanaman .tanaman-img {
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  border-radius: 4px;
+}
+
+.detail-tanaman .tanaman-info {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+}
+
+
 
 /*--------------------------------------------------------------
 # Disable AOS delay on mobile

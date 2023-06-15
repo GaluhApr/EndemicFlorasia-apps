@@ -197,4 +197,10 @@ class TanamanController extends Controller
         $tanaman = Tanaman::paginate(20);
         return view('frontend.tanaman', compact('tanaman'));
     }
+
+    public function detail($id)
+    {
+        $tanaman = Tanaman::find($id);
+        return view('frontend.detailtanaman', compact('tanaman'));
+    }
 }
