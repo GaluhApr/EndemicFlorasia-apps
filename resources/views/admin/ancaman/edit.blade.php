@@ -1,7 +1,7 @@
 @extends('layout.admin.main', [
     'namePage' => 'Edit  Ancaman',
 ])
-@section('title', 'edit-ancaman')
+@section('title', 'EndemicFlorasia | Ancaman')
 @section('content')
     <div class="panel-header panel-header-sm">
     </div>
@@ -23,7 +23,8 @@
                                         <label>Jenis Ancaman</label>
                                         <input type="text" name="jenis_ancaman"
                                             class="form-control  @error('jenis_ancaman') is-invalid @enderror"
-                                            placeholder="Masukan nama jenis ancaman" value="{{ $anc->jenis_ancaman }}" required>
+                                            placeholder="Masukan nama jenis ancaman" value="{{ $anc->jenis_ancaman }}"
+                                            required>
                                         @error('jenis_ancaman')
                                             <div class="invalid-feedback">
                                                 {{ $message }}
@@ -39,7 +40,8 @@
                                         <label>Tingkat</label>
                                         <input type="text" name="tingkat_ancaman"
                                             class="form-control  @error('tingkat_ancaman') is-invalid @enderror"
-                                            placeholder="Masukan tingkat ancaman" value="{{ $anc->tingkat_ancaman }}" required>
+                                            placeholder="Masukan tingkat ancaman" value="{{ $anc->tingkat_ancaman }}"
+                                            required>
                                         @error('tingkat_ancaman')
                                             <div class="invalid-feedback">
                                                 {{ $message }}
@@ -49,7 +51,7 @@
                                 </div>
 
                             </div>
-                            
+
 
                             <button type="submit" class="btn btn-primary mt-5 ">Submit</button>
                         </form>

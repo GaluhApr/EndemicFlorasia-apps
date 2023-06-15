@@ -20,8 +20,10 @@ use App\Http\Controllers\RegisterController;
 |
 */
 
-Route::prefix('')->group(function (){
-    Route::get('/', function () {return view('frontend.index');})->name('home');
+Route::prefix('')->group(function () {
+    Route::get('/', function () {
+        return view('frontend.index');
+    })->name('home');
     Route::get('/jelajah', [TanamanController::class, 'jelajah'])->name('explore');
 });
 
@@ -35,8 +37,8 @@ Route::get('/login', [LoginController::class, 'index'])->name('login')->middlewa
 Route::post('/login', [LoginController::class, 'authenticate']);
 Route::post('/logout', [LoginController::class, 'logout']);
 
-Route::get('/register', [RegisterController::class, 'index']);
-Route::post('/register', [RegisterController::class, 'store']);
+Route::get('/register', [RegisterController::class, 'index'])->middleware('auth');
+Route::post('/register', [RegisterController::class, 'store'])->middleware('auth');
 
 //delete
 Route::get('/tanaman/delete/{id}', [TanamanController::class, 'delete'])->name('delete')->middleware('auth');

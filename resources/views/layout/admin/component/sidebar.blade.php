@@ -51,6 +51,16 @@
                      <p>Icons</p> -->
                  </a>
              </li>
+             <li class="{{ Request::is('register*') ? 'active' : '' }}">
+                 <a href="{{ url('register') }}">
+                     <i class="now-ui-icons users_single-02"></i>
+                     <p>Daftar Admin
+                     </p>
+                     <!-- <a href="./icons.html">
+                     <i class="now-ui-icons education_atom"></i>
+                     <p>Icons</p> -->
+                 </a>
+             </li>
              <!-- {{-- <li>
                  <a href="./map.html">
                      <i class="now-ui-icons location_map-big"></i>

@@ -1,7 +1,7 @@
 @extends('layout.admin.main', [
     'namePage' => 'Edit  Habitat',
 ])
-@section('title', 'edit-habitat')
+@section('title', 'EndemicFlorasia | Habitat')
 @section('content')
     <div class="panel-header panel-header-sm">
     </div>
