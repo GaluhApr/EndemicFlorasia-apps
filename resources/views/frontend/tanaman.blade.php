@@ -12,7 +12,7 @@
         </div>
         <div class="container">
             <ol>
-                <li><a href="index.html">Beranda</a></li>
+                <li><a href="{{ route('home') }}">Beranda</a></li>
                 <li>Tanaman</li>
             </ol>
         </div>
