@@ -191,4 +191,10 @@ class TanamanController extends Controller
         $tanaman->delete();
         return redirect('/tanaman');
     }
+
+    public function jelajah()
+    {
+        $tanaman = Tanaman::paginate(20);
+        return view('frontend.tanaman', compact('tanaman'));
+    }
 }

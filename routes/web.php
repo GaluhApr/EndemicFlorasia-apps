@@ -22,6 +22,7 @@ use App\Http\Controllers\RegisterController;
 
 Route::prefix('')->group(function (){
     Route::get('/', function () {return view('frontend.index');})->name('home');
+    Route::get('/jelajah', [TanamanController::class, 'jelajah'])->name('explore');
 });
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');

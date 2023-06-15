@@ -9,7 +9,7 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="active" href="/">Home</a></li>
+          <li><a href="{{ route('home') }}">Beranda</a></li>
           <!-- <li class="dropdown"><a href="#"><span>About</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="about.html">About</a></li>
@@ -25,7 +25,7 @@
               </li>
             </ul>
           </li> -->
-          <li><a href="#services">Tanaman</a></li>
+          <li><a href="{{ route('explore') }}">Tanaman</a></li>
           <!-- <li><a href="pricing.html">Pricing</a></li>
           <li><a href="portfolio.html">Portfolio</a></li>
           <li><a href="blog.html">Blog</a></li> -->
