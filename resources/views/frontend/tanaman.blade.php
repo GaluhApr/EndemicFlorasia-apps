@@ -13,8 +13,8 @@
         </div>
         <div class="container">
             <ol>
-                <li><a href="index.html">Home</a></li>
-                <li>Portolio</li>
+                <li><a href="{{route('home')}}">Home</a></li>
+                <li>Tanaman</li>
             </ol>
         </div>
     </section><!-- End Breadcrumbs -->
@@ -31,6 +31,11 @@
                             <div class="portfolio-info">
                                 <h4>{{ $tnmn->nama_tanaman }}</h4>
                                 <p>{{ $tnmn->daerah_endemis }}</p>
+                                <div class="portfolio-links">
+                                    <a href="{{ asset('storage/' . $tnmn->gambar) }}" data-gallery="portfolioGallery"
+                                        class="portfolio-lightbox" title="{{$tnmn->nama_tanaman}}"><i class="bx bx-fullscreen"></i></a>
+                                    <a href="{{ route('tanamandetail', [$tnmn->id, $tnmn->habitat_id, $tnmn->ancaman_id]) }}" title="More Details"><i class="bx bx-info-circle"></i></a>
+                                </div>
                             </div>
                         </div>
                     </div>

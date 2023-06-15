@@ -25,6 +25,7 @@ Route::prefix('')->group(function () {
         return view('frontend.index');
     })->name('home');
     Route::get('/jelajah', [TanamanController::class, 'jelajah'])->name('explore');
+    Route::get('/jelajah/detail{id}&{habitatid}&{ancamanid}', [TanamanController::class, 'detail'])->name('tanamandetail');
 });
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');
