@@ -6,8 +6,7 @@
             <div class="container">
                 <div class="breadcrumb-hero">
                     <h2>Tanaman Endemik</h2>
-                    <p>Est dolorum ut non facere possimus quibusdam eligendi voluptatem. Quia id aut similique quia voluptas
-                        sit quaerat debitis. Rerum omnis ipsam aperiam consequatur laboriosam nemo harum praesentium. </p>
+                    <p>Temukan informasi tentang tanaman endemik di daerah Anda. </p>
                 </div>
             </div>
         </div>
@@ -20,7 +19,7 @@
     </section><!-- End Breadcrumbs -->
 
     <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio">
+    <section id="card-tanaman" class="card-tanaman">
         <div class="container">
 
             <div class="row portfolio-container" data-aos="fade-up">
@@ -38,7 +37,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 @endforeach
             </div>
 

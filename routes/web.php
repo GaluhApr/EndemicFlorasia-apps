@@ -28,6 +28,8 @@ Route::prefix('')->group(function () {
     Route::get('/jelajah/detail{id}&{habitatid}&{ancamanid}', [TanamanController::class, 'detail'])->name('tanamandetail');
 });
 
+Route::get('/detailtanaman/{id}', [TanamanController::class, 'detail'])->name('detail');
+
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');
 Route::resource('/tanaman', TanamanController::class)->middleware('auth');
 Route::resource('/habitat', HabitatController::class)->middleware('auth');
