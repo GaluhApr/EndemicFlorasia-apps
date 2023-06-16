@@ -205,4 +205,22 @@ class TanamanController extends Controller
         $ancaman = Ancaman::find($ancamanid);
         return view('frontend.tanamandetail', compact('tanaman', 'habitat', 'ancaman'));
     }
+    public function searchTanaman(Request $request)
+    {
+        if ($request->search) {
+            $searchTanaman = Tanaman::where('nama_tanaman', 'LIKE', '%' . $request->search . '%')
+                ->orWhere('deskripsi', 'LIKE', '%' . $request->search . '%')
+                ->orWhere('daerah_endemis', 'LIKE', '%' . $request->search . '%')
+                ->orderBy('id', 'desc')
+                ->paginate(20);
+
+            if ($searchTanaman->isEmpty()) {
+                return redirect()->back()->with('message', 'Tanaman tidak ditemukan');
+            }
+
+            return view('frontend.tanamansearch', compact('searchTanaman'));
+        } else {
+            return redirect()->back()->with('message', 'Masukkan kata kunci pencarian');
+        }
+    }
 }

@@ -5,8 +5,8 @@
         <div class="breadcrumb-hero">
             <div class="container">
                 <div class="breadcrumb-hero">
-                    <h2>Tanaman Endemik</h2>
-                    <p>Cari tanaman endemik </p>
+                    <h2>Hasil Pencarian</h2>
+                    <p>Berikut hasil pencarian anda terkait '{{ request()->get('search') }}'</p>
                 </div>
             </div>
         </div>
@@ -34,7 +34,7 @@
                 </div>
 
             <div class="row portfolio-container" data-aos="fade-up">
-                @foreach ($tanaman as $key => $tnmn)
+                @foreach ($searchTanaman as $key => $tnmn)
                     <div class="col-lg-3 col-md-6 portfolio-item filter-app">
                         <div class="portfolio-wrap">
                             <img src="{{ asset('storage/' . $tnmn->gambar) }}" class="img-fluid" alt="">
