@@ -192,10 +192,18 @@ class TanamanController extends Controller
         return redirect('/tanaman');
     }
 
-    public function jelajah()
+    public function jelajah(Request $request)
     {
-        $tanaman = Tanaman::paginate(20);
-        return view('frontend.tanaman', compact('tanaman'));
+        if ($request->search) {
+            $tanaman = Tanaman::where('nama_tanaman', 'LIKE', '%' . $request->search . '%')
+                ->orWhere('deskripsi', 'LIKE', '%' . $request->search . '%')
+                ->orWhere('daerah_endemis', 'LIKE', '%' . $request->search . '%')
+                ->orderBy('id', 'desc')
+                ->paginate(20);
+        } else {
+            $tanaman = Tanaman::paginate(20);
+        }
+        return view('frontend.tanaman', compact('tanaman', 'request'));
     }
 
     public function detail($id, $habitatid, $ancamanid)

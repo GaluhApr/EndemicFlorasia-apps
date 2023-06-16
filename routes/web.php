@@ -21,13 +21,15 @@ use App\Http\Controllers\RegisterController;
 */
 
 Route::prefix('')->group(function () {
-    Route::get('/', function () {return view('frontend.index');})->name('home');
+    Route::get('/', function () {
+        return view('frontend.index');
+    })->name('home');
     Route::get('/jelajah', [TanamanController::class, 'jelajah'])->name('explore');
     Route::get('/jelajah/detail{id}&{habitatid}&{ancamanid}', [TanamanController::class, 'detail'])->name('tanamandetail');
 });
 
 Route::get('/detailtanaman/{id}', [TanamanController::class, 'detail'])->name('detail');
-Route::get('search', [TanamanController::class, 'searchTanaman'])->name('search');
+// Route::get('search', [TanamanController::class, 'searchTanaman'])->name('search');
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');
 Route::resource('/tanaman', TanamanController::class)->middleware('auth');
