@@ -29,6 +29,7 @@ Route::prefix('')->group(function () {
 });
 
 Route::get('/detailtanaman/{id}', [TanamanController::class, 'detail'])->name('detail');
+Route::get('/tanaman/kategori/{kategori}', [TanamanController::class, 'kategori'])->name('tanaman.kategori');
 // Route::get('search', [TanamanController::class, 'searchTanaman'])->name('search');
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');

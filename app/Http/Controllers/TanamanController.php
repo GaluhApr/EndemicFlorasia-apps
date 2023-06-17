@@ -231,4 +231,16 @@ class TanamanController extends Controller
             return redirect()->back()->with('message', 'Masukkan kata kunci pencarian');
         }
     }
+    public function kategori($tanaman)
+    {
+        $tanaman = Tanaman::where('daerah_endemis', $tanaman)
+            ->orderBy('id', 'desc')
+            ->paginate(20);
+
+        if ($tanaman->isEmpty()) {
+            return redirect()->back()->with('message', 'Tidak ada tanaman dalam kategori ini');
+        }
+
+        return view('frontend.tanaman', compact('tanaman'));
+    }
 }
