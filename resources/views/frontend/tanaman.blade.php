@@ -24,9 +24,9 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="search-box">
-                        <form action="/jelajah" method="GET" data-aos="fade-up">
-                            <input type="text" style="width: 100%" name="search" value="{{ $request->search }}"
-                                placeholder="Cari tanaman endemik...">
+                        <form action="/jelajah" method="GET">
+                            <input type="text" style="width: 100%" name="search" value="{{ request()->get('search') }}"
+                                placeholder="Cari tanaman endemik">
                             <button type="submit"><i class="bi bi-search"></i></button>
                         </form>
                     </div>
@@ -55,7 +55,7 @@
                     @endforeach
                 </div>
             @else
-                <p class="text-center p-4">Hasil pencarian anda terkait '{{ request()->get('search') }}' Tidak ditemukan</p>
+                <p class="text-center p-4" data-aos="fade-up" >Hasil pencarian anda terkait '{{ request()->get('search') }}' Tidak ditemukan</p>
             @endif
         </div>
     </section><!-- End Portfolio Section -->
