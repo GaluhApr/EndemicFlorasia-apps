@@ -540,7 +540,7 @@ fieldset[disabled] .navbar .navbar-nav>a.btn.active {
 }
 
 .btn-primary {
-  background-color: #007074;
+  background-color: #147246;
   color: #FFFFFF;
 }
 
@@ -555,10 +555,10 @@ fieldset[disabled] .navbar .navbar-nav>a.btn.active {
 .show>.btn-primary.dropdown-toggle,
 .show>.btn-primary.dropdown-toggle:focus,
 .show>.btn-primary.dropdown-toggle:hover {
-  background-color: #007074;
+  background-color: #147246;
   color: #FFFFFF;
   box-shadow: none;
-  border-color: #007074;
+  border-color: #147246;
 }
 
 .btn-primary:not([data-action]):not([class*="btn-outline-"]):hover {
@@ -1021,8 +1021,8 @@ fieldset[disabled] .btn-neutral.active {
 }
 
 .btn-outline-primary {
-  color: #007074;
-  border-color: #007074;
+  color: #147246;
+  border-color: #147246;
 }
 
 .btn-outline-primary:hover,
@@ -1125,8 +1125,8 @@ fieldset[disabled] .btn-neutral.active {
 .show>.btn-outline-danger.dropdown-toggle:focus,
 .show>.btn-outline-danger.dropdown-toggle:hover {
   background-color: transparent;
-  color: #007074;
-  border-color: #007074;
+  color: #147246;
+  border-color: #147246;
   box-shadow: none;
 }
 
@@ -1303,7 +1303,7 @@ fieldset[disabled] .btn-link.active {
 
 .form-control {
   background-color: transparent;
-  border: 1px solid #007074;
+  border: 1px solid #147246;
   border-radius: 30px;
   color: #2c2c2c;
   line-height: normal;
@@ -1319,7 +1319,7 @@ fieldset[disabled] .btn-link.active {
 }
 
 .form-control:focus {
-  border: 1px solid #007074;
+  border: 1px solid #147246;
   -webkit-box-shadow: none;
   box-shadow: none;
   outline: 0 !important;
@@ -1330,7 +1330,7 @@ fieldset[disabled] .btn-link.active {
 .form-control:focus~.input-group-append .input-group-text,
 .form-control:focus+.input-group-prepend .input-group-text,
 .form-control:focus~.input-group-prepend .input-group-text {
-  border: 1px solid #007074;
+  border: 1px solid #147246;
   border-left: none;
   background-color: transparent;
 }
@@ -1936,7 +1936,7 @@ p.description {
 .text-primary,
 a.text-primary:focus,
 a.text-primary:hover {
-  color: #007074 !important;
+  color: #147246 !important;
 }
 
 .text-info,
@@ -4052,17 +4052,17 @@ Created using IcoMoon - icomoon.io
 
 .sidebar[data-color="blue"]:after,
 .off-canvas-sidebar[data-color="blue"]:after {
-  background: #007074;
+  background: #147246;
 }
 
 .sidebar[data-color="blue"] .nav li.active>a:not([data-toggle="collapse"]),
 .off-canvas-sidebar[data-color="blue"] .nav li.active>a:not([data-toggle="collapse"]) {
-  color: #007074;
+  color: #147246;
 }
 
 .sidebar[data-color="blue"] .nav li.active>a:not([data-toggle="collapse"]) i,
 .off-canvas-sidebar[data-color="blue"] .nav li.active>a:not([data-toggle="collapse"]) i {
-  color: #007074;
+  color: #147246;
 }
 
 .sidebar[data-color="green"]:after,
@@ -4186,10 +4186,10 @@ Created using IcoMoon - icomoon.io
   height: 260px;
   padding-top: 80px;
   padding-bottom: 45px;
-  background: #023c3e;
+  background: #085330;
   /* fallback for old browsers */
-  background: -webkit-gradient(linear, left top, right top, from(#023c3e), color-stop(60%, #044d4f), to(#06686c));
-  background: linear-gradient(to right, #023c3e 0%, #044d4f 60%, #06686c 100%);
+  background: -webkit-gradient(linear, left top, right top, from(#147246), color-stop(60%, #0c462b), to(#053a21));
+  background: linear-gradient(to right, #147246 0%, #07522f 60%, #093e25 100%);
   position: relative;
   overflow: hidden;
 }
