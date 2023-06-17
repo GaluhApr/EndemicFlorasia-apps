@@ -208,9 +208,19 @@
                                  <div class="col-md-4 ">
                                      <div class="form-group">
                                          <label>Daerah endemis</label>
-                                         <input type="text" name="daerah_endemis"
-                                             class="form-control @error('daerah_endemis') is-invalid @enderror "
-                                             placeholder="daerah endemis" value="{{ old('daerah_endemis') }}" required>
+                                         <select name="daerah_endemis"
+                                             class="form-control  @error('daerah_endemis') is-invalid @enderror">
+                                             <option value="{{ old('daerah_endemis') }}">{{ old('daerah_endemis') }}
+                                             </option>
+                                             <option value="Indonesia">Indonesia</option>
+                                             <option value="Malaysia">Malaysia</option>
+                                             <option value="Vietnam">Vietnam</option>
+                                             <option value="Thailand ">Thailand</option>
+                                             <option value="Cambodia">Cambodia</option>
+                                             <option value="Laos">Laos</option>
+                                             <option value="Philippines">Philippines</option>
+                                             <option value="Singapore">Singapore</option>
+                                         </select>
                                          @error('daerah_endemis')
                                              <div class="invalid-feedback">
                                                  {{ $message }}
