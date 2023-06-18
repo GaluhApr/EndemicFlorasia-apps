@@ -9,7 +9,7 @@
 
         <nav id="navbar" class="navbar">
             <ul>
-                <li><a class="active" href="{{ route('home') }}">Beranda</a></li>
+                <li><a href="{{ route('home') }}">Beranda</a></li>
                 <!-- <li class="dropdown"><a href="#"><span>About</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="about.html">About</a></li>
@@ -29,7 +29,7 @@
                 <!-- <li><a href="pricing.html">Pricing</a></li>
           <li><a href="portfolio.html">Portfolio</a></li>
           <li><a href="blog.html">Blog</a></li> -->
-                <li><a href="">Tentang Kami</a></li>
+                <li><a href="{{ route('tentangkami') }}">Tentang Kami</a></li>
 
                 <li><a class="getstarted" href="/login">login</a></li>
             </ul>
