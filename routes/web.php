@@ -47,7 +47,7 @@ Route::get('/register', [RegisterController::class, 'index'])->middleware('auth'
 Route::post('/register', [RegisterController::class, 'store'])->middleware('auth');
 
 //delete
-Route::get('/tanaman/delete/{id}', [TanamanController::class, 'delete'])->name('delete')->middleware('auth');
-Route::get('/habitat/delete/{id}', [HabitatController::class, 'delete'])->name('delete')->middleware('auth');
+Route::get('/tanaman/delete/{id}', [TanamanController::class, 'delete'])->name('delete');
+Route::get('/habitat/delete/{id}', [HabitatController::class, 'delete'])->name('delete');
 Route::get('/ancaman/delete/{id}', [AncamanController::class, 'delete'])->name('delete')->middleware('auth');
 Route::get('/keanekaragaman/delete/{id}', [KeanekaragamanController::class, 'delete'])->name('delete')->middleware('auth');
